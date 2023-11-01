@@ -1,0 +1,32 @@
+import:
+  - recipe/laravel.php
+  - contrib/php-fpm.php
+
+config:
+  repository: 'git@github.com:twarezak/mittelwertberechnen.de.git'
+  dotenv: '{{current_path}}/.env'
+  bin/php: '/usr/bin/php8.1'
+  keep_releases: 3
+
+hosts:
+  185.238.74.28:
+    remote_user: tomaszw
+    deploy_path: '/var/www/mittelwertberechnen.de/web'
+
+tasks:
+  deploy:
+    - deploy:prepare
+    - deploy:vendors
+    - npm:install
+    - npm:run:build
+    - artisan:storage:link
+    - artisan:optimize:clear
+    - deploy:publish
+  npm:run:build:
+    - run: 'cd {{release_path}} && npm run build'
+  npm:install:
+    - run: 'cd {{release_path}} && npm install'
+
+
+after:
+  deploy:failed: deploy:unlock

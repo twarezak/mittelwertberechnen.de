@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-3xl;
+        @apply font-bold;
+        @apply mt-5;
+        @apply mb-5;
+        @apply text-gray-700;
+    }
+    h2 {
+        @apply text-2xl;
+        @apply font-bold;
+        @apply mt-5;
+        @apply mb-5;
+        @apply text-gray-700;
+    }
+    h3, h4, h5 {
+        @apply text-xl;
+        @apply font-bold;
+        @apply mt-5;
+        @apply mb-5;
+        @apply text-gray-700;
+    }
+    p {
+        @apply mt-5;
+        @apply mb-5;
+    }
+    body {
+        @apply text-gray-600;
+    }
+    [type='text'],
+    [type='email'],
+    [type='url'],
+    [type='password'],
+    [type='number'],
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='week'],
+    [multiple],
+    textarea,
+    input:invalid {
+        @apply border-gray-600;
+        @apply border-opacity-25;
+        @apply shadow-none;
+    }
+    input, label {
+        @apply my-1
+    }
+    textarea {
+        @apply focus:border-gray-400 focus:ring-0
+    }
+    a {
+        @apply text-blue-500;
+    }
+    ol {
+        @apply list-decimal;
+        @apply ml-5;
+    }
+    ul {
+        @apply list-disc;
+        @apply ml-5;
+    }
+    .footer-link {
+        @apply block mt-2 text-sm text-gray-800 hover:underline;
+    }
+    code {
+        @apply border rounded p-1 my-1 bg-neutral-100;
+    }
+    table td {
+        @apply p-2;
+    }
+    table {
+        @apply text-center
+    }
+    table thead {
+        @apply bg-neutral-50 text-sm font-bold
+    }
+    table tbody td {
+        @apply border-separate border-y border-slate-400;
+    }
+
+    .box {
+        @apply border-2 border-dashed rounded p-5 text-center hover:bg-gray-50 hover:font-bold
+    }
+}

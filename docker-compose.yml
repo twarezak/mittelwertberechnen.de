@@ -1,0 +1,18 @@
+version: '3.5'
+services:
+    php:
+        build: docker/php-fpm
+        volumes:
+            - ./:/var/www/html:cached
+            - ./logs/symfony:/var/www/var/logs:cached
+    nginx:
+        build: docker/nginx
+        ports:
+            - '8022:80'
+        links:
+            - php
+        volumes:
+            - ./:/var/www/html:cached
+            - ./logs/nginx/:/var/log/nginx:cached
+        depends_on:
+            - php
