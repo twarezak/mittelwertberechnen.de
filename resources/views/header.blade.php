@@ -1,20 +1,21 @@
 <?php
 $menu = [
-    'Kalkulator Średniej' => route('home_page'),
-    'Kalkulatory średniej' => [
-        'Średnia arytmetyczna' => route('arithmetic'),
-        'Średnia ważona' => route('weight'),
-        'Średnia geometryczna' => route('geometric'),
-        'Średnia harmoniczna' => route('harmonic'),
-        'Mediana' => route('median'),
-        'Średnia kwadratowa' => route('square'),
+    'Mittelwert Berechnen' => route('home_page'),
+    'Durchschnittsrechner' => [
+        'Arithmetisches Mittel' => route('arithmetic'),
+        'Gewichtetes Mittel' => route('weight'),
+        'Geometrisches Mittel' => route('geometric'),
+        'Harmonisches Mittel' => route('harmonic'),
+        'Median' => route('median'),
+        'Quadratisches Mittel' => route('square'),
     ],
-    'Zadania' => route('tasks'),
-    'Średnie w arkuszu Google Spreadsheet' => route('spreadsheet'),
-    'Średnie w statystyce' => route('statistic'),
-    'Średnie a outliery' => route('outliery'),
-    'Odchylenie standardowe' => route('standard-deviation'),
+    'Aufgaben' => route('tasks'),
+    'Durchschnitte in Google Spreadsheet' => route('spreadsheet'),
+    'Durchschnitte in der Statistik' => route('statistic'),
+    'Durchschnitte und Ausreißer' => route('outliery'),
+    'Standardabweichung' => route('standard-deviation'),
 ];
+
 ?>
 <nav class="bg-gradient-to-r from-blue-100 via-slate-200 to-blue-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,21 +1,21 @@
 @extends('app')
 
-@section('title', 'Średnia harmoniczna - kalkulator średniej harmonicznej')
-@section('description', 'Potrzebujesz obliczyć średnią harmoniczną? Kalkulator średniej harmonicznej to narzędzie online, które pozwala na łatwe i szybkie obliczenie tej średniej.')
-@section('keywords', 'średnia harmoniczna, kalkulator średniej harmonicznej, średnia harmoniczna kalkulator')
+@section('title', 'Harmonisches Mittel - Rechner für das harmonische Mittel')
+@section('description', 'Müssen Sie das harmonische Mittel berechnen? Der Rechner für das harmonische Mittel ist ein Online-Tool, das eine einfache und schnelle Berechnung dieses Mittelwerts ermöglicht.')
+@section('keywords', 'harmonisches Mittel, Rechner für das harmonische Mittel, harmonisches Mittel Rechner')
 
 @section('content')
     <p>
-        Na tej stronie znajdziesz <strong>kalkulator średniej harmonicznej</strong>.
-        Jest to narzędzie przeznaczone dla uczniów i studentów,
-        którzy potrzebują szybkiego i łatwego sposobu na obliczenie średniej harmonicznej.
-        Dzięki naszemu kalkulatorowi, obliczenie średniej harmonicznej staje się proste i szybkie,
-        a Ty możesz skupić się na analizie i interpretacji wyniku.
+        Auf dieser Seite finden Sie den <strong>Rechner für das harmonische Mittel</strong>.
+        Dieses Werkzeug ist für Schüler und Studenten gedacht,
+        die eine schnelle und einfache Möglichkeit zur Berechnung des harmonischen Mittels benötigen.
+        Mit unserem Rechner wird die Berechnung des harmonischen Mittels einfach und schnell,
+        sodass Sie sich auf die Analyse und Interpretation des Ergebnisses konzentrieren können.
     </p>
 
     @include('ads.ad-top')
     <div class="harmonic rounded p-5 bg-gradient-to-r from-zinc-100 via-gray-100 to-zinc-100 shadow-2xl">
-        <label for="precision" class="text-xs block mb-5 text-right">Liczba po przecinku (precyzja)
+        <label for="precision" class="text-xs block mb-5 text-right">Zahl nach dem Dezimalpunkt (Genauigkeit)
             <select class="w-12 h-8 p-2 text-xs" id="precision">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -31,89 +31,98 @@
             <textarea class="w-full">2; 4; 6</textarea>
         </label>
         <div class="p-5 text-center text-sm">
-            średnia harmoniczna wynosi:
+            Das harmonische Mittel ist:
             <div class="p-2 text-2xl font-bold result">3.27</div>
         </div>
     </div>
 
     @include('ads.ad-bottom')
 
-    <h2>Kalkulator średniej harmonicznej</h2>
+    <h2>Rechner für das harmonische Mittel</h2>
     <p>
-        <strong>Kalkulator średniej harmonicznej</strong> to narzędzie przeznaczone dla uczniów i studentów (i nie tylko),
-        którzy potrzebują szybko i łatwo obliczyć <strong>średnią harmoniczną</strong>.
-        Kalkulator posiada pole tekstowe, do którego można wprowadzić liczby oddzielone średnikiem,
-        po czym automatycznie zostanie podany wynik.
-        Kalkulator pozwala również na wybór precyzji wyniku - ile miejsc po przecinku ma być wyświetlonych.
-        Każda zmiana w polu tekstowym lub wybór precyzji powoduje automatyczne przeliczenie i wyświetlenie wyniku.
+        Der <strong>Rechner für das harmonische Mittel</strong> ist ein Werkzeug für Schüler und Studenten (und nicht
+        nur),
+        die schnell und einfach das <strong>harmonische Mittel</strong> berechnen müssen.
+        Der Rechner verfügt über ein Textfeld, in das Zahlen eingegeben werden können, die durch ein Semikolon getrennt
+        sind,
+        woraufhin das Ergebnis automatisch berechnet wird.
+        Der Rechner ermöglicht es auch, die Genauigkeit des Ergebnisses zu wählen - wie viele Dezimalstellen angezeigt
+        werden sollen.
+        Jede Änderung im Textfeld oder bei der Auswahl der Genauigkeit führt zu einer automatischen Neuberechnung und
+        Anzeige des Ergebnisses.
+    </p>
+    <h3>Was ist das harmonische Mittel?</h3>
+    <p>
+        Das <strong>harmonische Mittel</strong> ist eine Art von Durchschnitt, der in der Statistik und Mathematik
+        verwendet wird.
+        Es basiert auf der Berechnung des Kehrwerts jeder Zahl in einer gegebenen Zahlenmenge, deren Summierung
+        und der anschließenden Division durch die Anzahl der Elemente in der Menge.
+        Mit anderen Worten, das harmonische Mittel ist der Kehrwert des arithmetischen Mittels der Kehrwerte einer
+        Zahlenmenge.
+    </p>
+    <h3>Wie wird das harmonische Mittel berechnet?</h3>
+    <p>
+        Die Formel zur Berechnung des harmonischen Mittels lautet wie folgt:
+    </p>
+    <p>
+        <code>H = n / (1/x<sub>1</sub> + 1/x<sub>2</sub> + ... + 1/x<sub>n</sub>)</code>
+    </p>
+    <p>
+        wo:<br/>
+        <i>H</i> - das harmonische Mittel darstellt<br/>
+        <i>n</i> - die Anzahl der Elemente in der Menge darstellt<br/>
+        <i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i> - die einzelnen Zahlen der Menge darstellen
+    </p>
+    <p>
+        Es ist zu beachten, dass das harmonische Mittel nicht definiert ist,
+        wenn irgendein Element der Menge gleich 0 ist, da der Kehrwert von 0 undefiniert ist.
+        Stellen Sie daher immer sicher, dass der Satz von Zahlen, aus dem Sie das harmonische Mittel berechnen, keine
+        Null enthält.
     </p>
 
-    <h3>Czym jest średnia harmoniczna?</h3>
+    <h3>Beispiele für die Anwendung des harmonischen Mittels</h3>
     <p>
-        <strong>Średnia harmoniczna</strong> to jeden z rodzajów średniej, który jest używany w statystyce i matematyce.
-        Polega ona na obliczeniu odwrotności każdej liczby z danego zbioru liczb, ich zsumowaniu
-        i następnym podzieleniu przez liczbę elementów w zbiorze.
-        Innymi słowy, średnia harmoniczna jest odwrotnością średniej odwrotności liczb z danego zbioru.
-    </p>
-    <h3>Jak oblicza się średnią harmoniczną?</h3>
-    <p>
-        Wzór na obliczanie średniej harmonicznej jest następujący:
+        Das harmonische Mittel ist besonders nützlich, wenn eine Zahlenreihe sowohl sehr kleine als auch sehr große
+        Zahlen enthält. In solchen Fällen ist das harmonische Mittel resistenter gegen extrem große oder kleine Werte
+        als andere Arten von Durchschnittswerten.
     </p>
     <p>
-        <code>H = n / (1/x<sub>1</sub> + 1/x<sub>2</sub> +...+ 1/x<sub>n</sub>)</code>
+        Das harmonische Mittel wird auch häufig in der Ökonomie verwendet, insbesondere beim Vergleich der
+        Produktionseffizienz verschiedener Unternehmen. Es ist hilfreich, weil es ein objektiveres Bild ermöglicht,
+        indem es unterschiedliche Produktionsniveaus und Kosten berücksichtigt.
     </p>
     <p>
-        gdzie:<br />
-        <i>H</i> - oznacza średnią harmoniczną<br />
-        <i>n</i> - oznacza liczbę elementów w zbiorze<br />
-        <i>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></i> - oznaczają poszczególne liczby z zbioru
+        Ein weiteres Beispiel für die Anwendung des harmonischen Mittels ist in der Chemie, wo es verwendet wird, um die
+        Konzentration einer Lösung auszudrücken. In der Physik wiederum wird es verwendet, um die durchschnittliche
+        Geschwindigkeit eines Körpers in gleichförmiger Bewegung anzugeben.
+    </p>
+    <h3>Vergleich des harmonischen Mittels mit anderen Arten von Durchschnitten</h3>
+    <p>
+        Es ist zu beachten, dass das harmonische Mittel weniger verbreitet ist als andere Arten von Durchschnitten,
+        wie das arithmetische Mittel und das geometrische Mittel, und es wird in der Praxis seltener verwendet.
     </p>
     <p>
-        Należy pamiętaj, że średnia harmoniczna jest niedefiniowana,
-        jeśli jakikolwiek element danego zbioru jest równy 0, ponieważ odwrotność 0 jest nieoznaczona.
-        Dlatego zawsze upewnij się, że zestaw liczb, z którego obliczasz średnią harmoniczną, nie zawiera zer.
-    </p>
-    <h3>Przykłady zastosowania średniej harmonicznej</h3>
-    <p>
-        Średnia harmoniczna jest szczególnie przydatna, gdy zestaw liczb zawiera zarówno bardzo małe,
-        jak i bardzo duże liczby. W takim przypadku średnia harmoniczna jest bardziej odporna na skrajnie duże
-        lub małe wartości niż inne rodzaje średnich.
+        Im Gegensatz zum arithmetischen und geometrischen Mittel ist das harmonische Mittel besonders nützlich in
+        Situationen,
+        in denen ein Satz von Zahlen sowohl sehr kleine als auch sehr große Werte enthält. Es ist hilfreich,
+        weil es ein objektiveres Bild ermöglicht, indem es unterschiedliche Produktionsniveaus und Kosten
+        berücksichtigt.
     </p>
     <p>
-        Średnia harmoniczna jest również często stosowana w ekonomii,
-        zwłaszcza przy porównywaniu efektywności produkcji różnych firm.
-        Jest to pomocne, ponieważ pozwala na uzyskanie bardziej obiektywnego obrazu,
-        biorąc pod uwagę różne poziomy produkcji i koszty.
+        Beachten Sie, dass die Wahl der richtigen Art des Durchschnitts von der spezifischen Situation und den
+        verfügbaren Daten abhängt.
+        Bevor Sie einen Durchschnitt berechnen, sollten Sie überlegen, welcher davon am besten geeignet ist,
+        um das Ergebnis im gegebenen Kontext darzustellen.
     </p>
+    <h3>Schlussbemerkungen - Denken Sie daran, die 0 in Berechnungen einzubeziehen</h3>
     <p>
-        Innym przykładem zastosowania średniej harmonicznej jest w chemii,
-        gdzie jest stosowana do wyrażania stężenia roztworu.
-        W fizyce z kolei, jest stosowana do oznaczania przeciętnej prędkości ciała w ruchu jednostajnym.
-    </p>
-    <h3>Porównanie średniej harmonicznej z innymi rodzajami średnich</h3>
-    <p>
-        Warto pamiętać, że średnia harmoniczna jest mniej popularna niż inne rodzaje średnich,
-        takie jak średnia arytmetyczna i średnia geometryczna i rzadziej jest stosowana w praktyce.
-    </p>
-    <p>
-        W przeciwieństwie do średniej arytmetycznej i średniej geometrycznej,
-        średnia harmoniczna jest szczególnie przydatna w sytuacjach, gdy zestaw liczb zawiera zarówno bardzo małe,
-        jak i bardzo duże wartości. Jest to pomocne, ponieważ pozwala na uzyskanie bardziej obiektywnego obrazu,
-        biorąc pod uwagę różne poziomy produkcji i koszty.
-    </p>
-    <p>
-        Pamiętaj, że dobór odpowiedniego rodzaju średniej jest zależny od konkretnej sytuacji oraz od danych,
-        które posiadasz.
-        Przed obliczeniem średniej warto przemyśleć, która z nich będzie najlepsza do przedstawienia wyniku w danym kontekście.
-    </p>
-    <h3>Uwagi końcowe - pamiętaj o uwzględnieniu 0 w obliczeniach</h3>
-    <p>
-        Podsumowując, średnia harmoniczna jest jednym z rodzajów średnich,
-        który jest stosowany w statystyce i matematyce.
-        Polega ona na obliczeniu odwrotności każdej liczby z danego zbioru liczb i ich następnym podzieleniu przez liczbę elementów w zbiorze.
-        Jest szczególnie przydatna w sytuacjach, gdy zestaw liczb zawiera zarówno bardzo małe,
-        jak i bardzo duże wartości. Zastosowanie znajduje w ekonomii, chemii i fizyce,
-        jednak zawsze trzeba pamiętać, aby nie uwzględnić wartości 0 w obliczeniach.
+        Zusammenfassend ist das harmonische Mittel eine der Durchschnittsarten,
+        die in der Statistik und Mathematik verwendet wird.
+        Es basiert auf der Berechnung des Kehrwerts jeder Zahl in einer gegebenen Zahlenmenge und deren anschließender Division durch
+        die Anzahl der Elemente in der Menge.
+        Es ist besonders nützlich in Situationen, in denen eine Zahlenreihe sowohl sehr kleine als auch sehr große Werte enthält.
+        Es findet Anwendung in der Ökonomie, Chemie und Physik,
+        jedoch sollte man immer daran denken, den Wert 0 nicht in die Berechnungen einzubeziehen.
     </p>
 
 @endsection

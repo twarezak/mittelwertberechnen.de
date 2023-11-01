@@ -1,20 +1,23 @@
 @extends('app')
 
-@section('title', 'Średnia geometryczna - kalkulator średniej geometrycznej')
-@section('description', 'Kalkulator średniej geometrycznej - szybko i łatwo oblicz średnią z iloczynu liczb. Tne prosty kalkulator pozwoli ci szybko obliczyć średnią geometryczną.')
-@section('keywords', 'średnia geometryczna, kalkulator średniej geometrycznej, średnia geometryczna kalkulator')
+@section('title', 'Geometrisches Mittel - Rechner für das geometrische Mittel')
+@section('description', 'Rechner für das geometrische Mittel - schnell und einfach das Mittel aus dem Produkt der Zahlen berechnen. Dieser Rechner hilft Ihnen, das geometrische Mittel zu berechnen.')
+@section('keywords', 'geometrisches Mittel, Rechner für das geometrische Mittel, geometrisches Mittel Rechner')
 
 @section('content')
     <p>
-        Czy potrzebujesz szybko obliczyć <strong>średnią geometryczną</strong>? Nasz kalkulator jest tu, aby Ci pomóc!
-        Wprowadź swoje dane, a my obliczymy wynik za Ciebie. Nie musisz tracić czasu na ręczne obliczenia -
-        <strong>kalkulator średniej geometrycznej</strong> jest prosty w użyciu i pozwoli Ci szybko uzyskać wynik,
-        który jest precyzyjny do wybranej liczby miejsc po przecinku.
+        Brauchen Sie schnell das <strong>geometrische Mittel</strong> berechnet? Unser Rechner ist hier, um Ihnen zu
+        helfen!
+        Geben Sie Ihre Daten ein und wir berechnen das Ergebnis für Sie. Keine Zeitverschwendung mit manuellen
+        Berechnungen –
+        der <strong>Rechner für das geometrische Mittel</strong> ist einfach zu bedienen und ermöglicht es Ihnen,
+        schnell ein Ergebnis zu erhalten,
+        das bis zu einer gewählten Anzahl von Dezimalstellen genau ist.
     </p>
 
     @include('ads.ad-top')
     <div class="geometric rounded p-5 bg-gradient-to-r from-zinc-100 via-gray-100 to-zinc-100 shadow-2xl">
-        <label for="precision" class="text-xs block mb-5 text-right">Liczba po przecinku (precyzja)
+        <label for="precision" class="text-xs block mb-5 text-right">Zahl nach dem Dezimalpunkt (Genauigkeit)
             <select class="w-12 h-8 p-2 text-xs" id="precision">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -30,134 +33,150 @@
             <textarea class="w-full">2; 4; 6</textarea>
         </label>
         <div class="p-5 text-center text-sm">
-            średnia geometryczna wynosi:
+            Das geometrische Mittel ist:
             <div class="p-2 text-2xl font-bold result">3.63</div>
         </div>
     </div>
 
     @include('ads.ad-bottom')
 
-    <h2>Kalkulator średniej geometrycznej</h2>
+    <h2>Rechner für das geometrische Mittel</h2>
     <p>
-        <strong>Kalkulator średniej geometrycznej</strong> jest prosty w użyciu i pozwoli Ci szybko obliczyć
-        średnią z iloczynu kilku liczb.
-        Aby skorzystać z kalkulatora, wystarczy, że wprowadzisz swoje dane do pola tekstowego, oddzielając je średnikami.
-        Możesz również wybrać, z jaką precyzją chcesz otrzymać wynik, określając liczbę miejsc po przecinku.
-        Każda zmiana w polu tekstowym lub wybór precyzji powoduje automatyczne przeliczenie i wyświetlenie wyniku.
-        Skorzystaj z naszego kalkulatora już dziś i szybko oblicz <strong>średnią geometryczną</strong>.
+        Der <strong>Rechner für das geometrische Mittel</strong> ist einfach zu bedienen und ermöglicht es Ihnen,
+        schnell
+        das Mittel aus dem Produkt mehrerer Zahlen zu berechnen.
+        Um den Rechner zu benutzen, geben Sie einfach Ihre Daten in das Textfeld ein und trennen Sie sie durch
+        Semikolons.
+        Sie können auch auswählen, wie genau Sie das Ergebnis erhalten möchten, indem Sie die Anzahl der Dezimalstellen
+        festlegen.
+        Jede Änderung im Textfeld oder Auswahl der Genauigkeit führt zu einer automatischen Neuberechnung und Anzeige
+        des Ergebnisses.
+        Nutzen Sie unseren Rechner noch heute und berechnen Sie schnell das <strong>geometrische Mittel</strong>.
     </p>
 
-    <h3>Co to jest średnia geometryczna?</h3>
+    <h3>Was ist das geometrische Mittel?</h3>
     <p>
-        <strong>Średnia geometryczna</strong> to matematyczny wskaźnik średniej, który jest stosowany,
-        gdy chcemy obliczyć średnią arytmetyczną z mnożenia kilku liczb.
-        W innych słowach średnia geometryczna jest to pierwiastek potęgi n z iloczynu n liczb.
-        Jest to często stosowane w przypadku, gdy chcemy uzyskać średnią arytmetyczną dla danych,
-        które są bardzo różne od siebie lub skorelowane liniowo. Może być również używana w wielu dziedzinach,
-        takich jak finansach, statystyce, naukach przyrodniczych i technologii.
-        Należy jednak pamiętać, że średnia geometryczna nie jest dobrze przystosowana do danych,
-        które nie są skorelowane liniowo, oraz nie może być obliczona dla wartości ujemnych.
+        Das <strong>geometrische Mittel</strong> ist ein mathematischer Indikator für das Durchschnittliche, der
+        verwendet wird,
+        wenn wir das arithmetische Mittel aus der Multiplikation mehrerer Zahlen berechnen wollen.
+        Mit anderen Worten, das geometrische Mittel ist die n-te Wurzel aus dem Produkt von n Zahlen.
+        Es wird oft verwendet, wenn wir ein arithmetisches Mittel für Daten erhalten wollen,
+        die sehr unterschiedlich oder linear korreliert sind. Es kann auch in vielen Bereichen verwendet werden,
+        wie in Finanzen, Statistik, Naturwissenschaften und Technologie.
+        Es ist jedoch zu beachten, dass das geometrische Mittel nicht gut für Daten geeignet ist,
+        die nicht linear korreliert sind, und es kann nicht für negative Werte berechnet werden.
     </p>
     <p>
-        <strong>definicja:</strong> średnia geometryczna dwóch lub więcej liczb
+        <strong>Definition:</strong> Das geometrische Mittel von zwei oder mehr Zahlen
         <code>x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub></code>
-        jest równa pierwiastkowi n-tego stopnia z iloczynu tych liczb:<br/>
-        <img src="{{ asset('img/srednia-geometryczna-wzor.png') }}" alt="Średnia geometryczna - wzór"
+        entspricht der n-ten Wurzel aus dem Produkt dieser Zahlen:<br/>
+        <img src="{{ asset('img/geometrisches-mittel-formel.png') }}" alt="Geometrisches Mittel - Formel"
              class="mt-5 mx-auto">
     </p>
-    <h3>Przykład</h3>
+
+    <h3>Beispiel</h3>
     <p>
-        Aby obliczyć średnią geometryczną z kilku liczb, wystarczy je pomnożyć razem,
-        a następnie znaleźć pierwiastek z otrzymanego iloczynu, który jest stopnia n.
+        Um das geometrische Mittel einer Anzahl von Zahlen zu berechnen, müssen Sie diese miteinander multiplizieren
+        und dann die Wurzel des erhaltenen Produkts finden, die der Anzahl der Zahlen entspricht (n-ter Grad).
     </p>
     <p>
-        Na przykład, aby obliczyć średnią geometryczną z liczb 4, 9 i 16, należy wykonać następujące kroki:
+        Zum Beispiel, um das geometrische Mittel der Zahlen 4, 9 und 16 zu berechnen, folgen Sie diesen Schritten:
     </p>
     <ul>
-        <li>pomnóż razem wszystkie liczby: 4 * 9 * 16 = 576</li>
-        <li>znajdź pierwiastek z iloczynu: √576 = 24</li>
+        <li>multiplizieren Sie alle Zahlen miteinander: 4 * 9 * 16 = 576</li>
+        <li>finden Sie die Wurzel des Produkts: √576 = 24</li>
     </ul>
     <p>
-        W tym przypadku średnia geometryczna wynosi 24.
+        In diesem Fall ist das geometrische Mittel 24.
     </p>
 
-    <h3>Zastosowanie średniej geometrycznej w różnych dziedzinach</h3>
+    <h3>Anwendung des geometrischen Mittels in verschiedenen Bereichen</h3>
     <p>
-        Średnia geometryczna jest szeroko stosowana w wielu dziedzinach, takich jak finansach, statystyce,
-        naukach przyrodniczych i technologii.
+        Das geometrische Mittel wird in vielen Bereichen wie Finanzen, Statistik, Naturwissenschaften und Technologie
+        häufig verwendet.
     </p>
     <p>
-        Finanse: Średnia geometryczna jest często stosowana w finansach do obliczania stopy zwrotu z inwestycji.
-        Na przykład, jeśli mamy dane dotyczące stopy zwrotu z 3 różnych inwestycji w ciągu ostatnich 3 lat,
-        możemy obliczyć średnią geometryczną, aby otrzymać średnią roczną stopę zwrotu z tych inwestycji.
+        Finanzen: In der Finanzwelt wird das geometrische Mittel oft verwendet, um die Rendite von Investitionen zu
+        berechnen.
+        Zum Beispiel, wenn wir Daten über die Rendite von 3 verschiedenen Investitionen über die letzten 3 Jahre haben,
+        können wir das geometrische Mittel berechnen, um die durchschnittliche jährliche Rendite dieser Investitionen zu
+        erhalten.
     </p>
     <p>
-        Statystyka: Średnia geometryczna jest często stosowana w statystyce do obliczania średniej arytmetycznej dla
-        danych,
-        które są skorelowane liniowo. Na przykład, jeśli mamy dane dotyczące wzrostu ludności w różnych krajach,
-        możemy obliczyć średnią geometryczną, aby otrzymać średni wzrost ludności dla tych krajów.
+        Statistik: In der Statistik wird das geometrische Mittel häufig verwendet, um den Durchschnitt von linear
+        korrelierten Daten zu berechnen.
+        Wenn wir zum Beispiel Daten über das Bevölkerungswachstum in verschiedenen Ländern haben,
+        können wir das geometrische Mittel berechnen, um das durchschnittliche Bevölkerungswachstum für diese Länder zu
+        erhalten.
     </p>
     <p>
-        Nauki przyrodnicze: Średnia geometryczna jest często stosowana w naukach przyrodniczych
-        do obliczania średniej dla wielu wielkości fizycznych, takich jak stężenia substancji chemicznych lub masy
-        ciała.
-        Na przykład, jeśli mamy dane dotyczące stężenia różnych substancji chemicznych w różnych próbkach,
-        możemy obliczyć średnią geometryczną, aby uzyskać średnie stężenie dla tych próbek.
+        Naturwissenschaften: In den Naturwissenschaften wird das geometrische Mittel oft verwendet,
+        um den Durchschnitt von vielen physikalischen Größen zu berechnen, wie die Konzentration von chemischen
+        Substanzen oder Körpermasse.
+        Wenn wir zum Beispiel Daten über die Konzentration verschiedener chemischer Substanzen in verschiedenen Proben
+        haben,
+        können wir das geometrische Mittel berechnen, um die durchschnittliche Konzentration für diese Proben zu
+        erhalten.
     </p>
     <p>
-        Technologia: Średnia geometryczna jest często stosowana w technologii do obliczania średniej dla wielu
-        parametrów,
-        takich jak moc urządzenia lub jasność ekranu. Na przykład, jeśli mamy dane dotyczące mocy różnych urządzeń,
-        możemy obliczyć średnią geometryczną, aby uzyskać średnią moc dla tych urządzeń.
+        Technologie: In der Technologie wird das geometrische Mittel oft verwendet, um den Durchschnitt von vielen
+        Parametern zu berechnen,
+        wie die Leistung eines Geräts oder die Helligkeit eines Bildschirms.
+        Wenn wir zum Beispiel Daten über die Leistung verschiedener Geräte haben,
+        können wir das geometrische Mittel berechnen, um die durchschnittliche Leistung dieser Geräte zu erhalten.
     </p>
     <p>
-        Średnia geometryczna jest szeroko stosowana w wielu dziedzinach, takich jak finansach, statystyce,
-        naukach przyrodniczych i technologii. Może być używana do obliczania średniej arytmetycznej dla danych,
-        które są bardzo różne od siebie lub skorelowane liniowo. Jest to cenne narzędzie,
-        które należy wziąć pod uwagę podczas analizy danych, chociaż należy pamiętać o jego ograniczeniach,
-        takich jak wrażliwość na wartości ujemne i trudność obliczeniowa.
+        Das geometrische Mittel wird in vielen Bereichen wie Finanzen, Statistik, Naturwissenschaften und Technologie
+        häufig verwendet.
+        Es kann verwendet werden, um den Durchschnitt von Daten zu berechnen, die sich stark voneinander unterscheiden
+        oder linear korreliert sind.
+        Es ist ein wertvolles Werkzeug, das bei der Datenanalyse berücksichtigt werden sollte,
+        obwohl seine Einschränkungen, wie die Empfindlichkeit gegenüber negativen Werten und die Rechenkomplexität,
+        beachtet werden müssen.
     </p>
-    <h3>Wady i zalety stosowania średniej geometrycznej</h3>
+
+    <h3>Vor- und Nachteile der Verwendung des geometrischen Mittels</h3>
     <p>
-        Średnia geometryczna jest cennym narzędziem matematycznym, które jest stosowane w wielu dziedzinach.
-        Ma jednak kilka ograniczeń, które należy wziąć pod uwagę podczas jej stosowania.
+        Das geometrische Mittel ist ein wertvolles mathematisches Werkzeug, das in vielen Bereichen eingesetzt wird.
+        Es hat jedoch einige Einschränkungen, die bei der Verwendung berücksichtigt werden müssen.
     </p>
     <p>
-        Zalety:
+        Vorteile:
     </p>
     <ul>
-        <li>średnia geometryczna lepiej oddaje rzeczywisty rozkład danych niż średnia arytmetyczna, gdy dane są bardzo
-            różne od siebie;
+        <li>Das geometrische Mittel gibt die tatsächliche Verteilung der Daten besser wieder als das arithmetische
+            Mittel, wenn die Daten stark unterschiedlich sind;
         </li>
-        <li>średnia geometryczna jest odporna na odstające wartości (outlier'y), co oznacza, że jedna lub kilka
-            odstających wartości nie znacząco wpłynie na ostateczny wynik;
+        <li>Das geometrische Mittel ist resistent gegen Ausreißer, was bedeutet, dass ein oder mehrere Ausreißer den
+            Endergebnis nicht signifikant beeinflussen;
         </li>
-        <li>średnia geometryczna jest często stosowana w statystyce do obliczania średniej dla danych, które są
-            skorelowane liniowo;
+        <li>Das geometrische Mittel wird häufig in der Statistik verwendet, um den Durchschnitt für linear korrelierte
+            Daten zu berechnen;
         </li>
     </ul>
 
     <p>
-        Wady:
+        Nachteile:
     </p>
     <ul>
-        <li>Średnia geometryczna jest wrażliwa na wartości ujemne. W przeciwieństwie do średniej arytmetycznej, średnia
-            geometryczna nie może być obliczona dla wartości ujemnych;
+        <li>Das geometrische Mittel ist empfindlich gegenüber negativen Werten. Im Gegensatz zum arithmetischen Mittel
+            kann das geometrische Mittel nicht für negative Werte berechnet werden;
         </li>
-        <li>Średnia geometryczna jest trudniejsza do obliczenia niż średnia arytmetyczna, ponieważ wymaga podniesienia
-            wszystkich liczb do potęgi n i obliczenia pierwiastka n-tego stopnia;
+        <li>Das geometrische Mittel ist schwieriger zu berechnen als das arithmetische Mittel, da es erforderlich ist,
+            alle Zahlen auf die Potenz n zu erheben und die n-te Wurzel zu berechnen;
         </li>
-        <li>Średnia geometryczna nie jest dobrze przystosowana do danych, które nie są skorelowane liniowo. W takim
-            przypadku lepszym wyborem byłaby średnia harmoniczna lub średnia kwadratowa;
+        <li>Das geometrische Mittel ist nicht gut an Daten angepasst, die nicht linear korreliert sind. In solchen
+            Fällen wäre das harmonische Mittel oder das quadratische Mittel eine bessere Wahl;
         </li>
     </ul>
     <p>
-        Średnia geometryczna jest cennym narzędziem matematycznym, które ma wiele zalet,
-        takich jak lepsze oddawanie rzeczywistego rozkładu danych i odporność na odstające wartości.
-        Jest również często stosowana w statystyce do obliczania średniej dla danych, które są skorelowane liniowo.
-        Jednakże należy pamiętać o jej ograniczeniach, takich jak wrażliwość na wartości ujemne i trudność
-        obliczeniowa.
-        W przypadku danych, które nie są skorelowane liniowo, lepszym wyborem mogą być inne miary średniej,
-        takie jak średnia harmoniczna lub średnia kwadratowa.
+        Das geometrische Mittel ist ein wertvolles mathematisches Werkzeug mit vielen Vorteilen,
+        wie einer besseren Wiedergabe der tatsächlichen Datenverteilung und einer Resistenz gegen Ausreißer.
+        Es wird auch häufig in der Statistik verwendet, um den Durchschnitt für linear korrelierte Daten zu berechnen.
+        Dennoch sollten seine Einschränkungen, wie die Empfindlichkeit gegenüber negativen Werten und die rechnerische
+        Schwierigkeit, nicht außer Acht gelassen werden.
+        Bei Daten, die nicht linear korreliert sind, könnten andere Mittelwerte, wie das harmonische oder das
+        quadratische Mittel, eine bessere Wahl sein.
     </p>
+
 @endsection

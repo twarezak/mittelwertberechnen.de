@@ -1,18 +1,22 @@
 @extends('app')
 
-@section('title', 'Średnia ważona - kalkulator średniej ważonej online')
-@section('description', 'Jeśli chcesz szybko i łatwo obliczyć średnią ocen z przedmiotów z różnymi wagami, to kalkulator średniej ważonej jest idealnym rozwiązaniem dla Ciebie.')
-@section('keywords', 'kalkulator średniej ważonej, kalkulator sredniej wazonej, średnia ważona, srednia wazona, średnia ważona kalkulator, kalkulator średniej')
+@section('title', 'Gewichtetes Mittel - Online-Rechner für das gewichtete Mittel')
+@section('description', 'Wenn Sie schnell und einfach einen gewichteten Notendurchschnitt aus unterschiedlich gewichteten Fächern berechnen möchten, ist unser Online-Rechner für gewichtete Mittelwerte ideal.')
+@section('keywords', 'gewichteter durchschnitt, gewichtetes mittel')
+
 
 @section('content')
     <p>
-        <strong>Kalkulator średniej ważonej</strong> na tej stronie to narzędzie,
-        które pozwala na szybkie i dokładne obliczenie średniej wartości elementów o różnych wagach.
-        Może być ono przydatne w wielu sytuacjach, w których chcemy uwzględnić różnice między poszczególnymi elementami.
+        <strong>Der Rechner für das gewichtete Mittel</strong> auf dieser Seite ist ein Werkzeug,
+        das eine schnelle und genaue Berechnung des gewichteten Durchschnitts von Elementen mit unterschiedlichen
+        Gewichtungen ermöglicht.
+        Es kann in vielen Situationen nützlich sein, in denen Unterschiede zwischen den einzelnen Elementen
+        berücksichtigt werden sollen.
     </p>
+
     @include('ads.ad-top')
     <div class="weight rounded p-5 bg-gradient-to-r from-zinc-100 via-gray-100 to-zinc-100 shadow-2xl">
-        <label for="precision" class="text-xs block mb-5 text-right">Liczba po przecinku (precyzja)
+        <label for="precision" class="text-xs block mb-5 text-right">Zahl nach dem Dezimalpunkt (Genauigkeit)
             <select class="w-12 h-8 p-2 text-xs" id="precision">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -25,8 +29,8 @@
                 <option value="8">8</option>
             </select></label>
         <div class="grid grid-cols-2 gap-4 mt-5 md:w-8/12 lg:w-6/12 m-auto inputs">
-            <strong class="text-right">Wartości (oceny)</strong>
-            <strong>Wagi</strong>
+            <strong class="text-right">Werte (Ratings)</strong>
+            <strong>Gewichte</strong>
 
             <label class="text-right"><input type="number" class="w-10/12 values" value="1"></label>
             <label><input type="number" class="w-10/12 weights" value="2">
@@ -34,161 +38,170 @@
 
             <label class="text-right"><input type="number" class="w-10/12 values" value="3"></label>
             <label><input type="number" class="w-10/12 weights" value="4">
-                <span class="text-red-400 p-3 text-xl font-bold hover:cursor-pointer hover:text-red-600 remove absolute">x</span>
+                <span
+                    class="text-red-400 p-3 text-xl font-bold hover:cursor-pointer hover:text-red-600 remove absolute">x</span>
             </label>
         </div>
         <div class="grid grid-cols-1 gap-4 mt-5 md:w-8/12 lg:w-6/12 m-auto text-sm text-right pr-14
         text-blue-400 font-bold hover:cursor-pointer hover:text-blue-500 add">
-            dodaj wiersz
+            Zeile hinzufügen
         </div>
         <div class="p-5 text-center text-sm">
-            średnia ważona wynosi:
+            Der gewichtete Durchschnitt ist:
             <div class="p-2 text-2xl font-bold result">2.33</div>
         </div>
     </div>
     @include('ads.ad-bottom')
 
-    <h2>Kalkulator średniej ważonej</h2>
+    <h2>Rechner für das gewichtete Mittel</h2>
     <p>
-        Nasz <strong>kalkulator średniej ważonej</strong> jest prosty w obsłudze i intuicyjny w użytkowaniu.
-        Wystarczy wprowadzić wartości i wagi poszczególnych elementów, a kalkulator automatycznie obliczy średnią ważoną.
+        Unser <strong>Rechner für das gewichtete Mittel</strong> ist einfach zu bedienen und benutzerfreundlich.
+        Geben Sie einfach die Werte und Gewichte der einzelnen Elemente ein, und der Rechner berechnet automatisch das
+        gewichtete Mittel.
     </p>
     <p>
-        Powyżej musisz wpisać odpowiednio poszczególne wartości (ocenę) oraz ich wagi.
-        Jeśli brakuje miejsc do wpisania tych danych kliknij w
-    <span class="text-sm text-blue-400 font-bold">dodaj wiersz</span>, aby dodać w kolejny wiersz.
-        Będzie on zawierał dwa pola, w których będziesz mógł wpisać kolejną wartość (ocenę) oraz wagę.
+        Oberhalb müssen Sie die entsprechenden Werte (z.B. Noten) sowie deren Gewichte eingeben.
+        Wenn es nicht genug Platz gibt, um diese Daten einzugeben, klicken Sie auf
+        <span class="text-sm text-blue-400 font-bold">Zeile hinzufügen</span>, um eine weitere Zeile hinzuzufügen.
+        Diese wird zwei Felder enthalten, in die Sie einen weiteren Wert (Note) und das Gewicht eintragen können.
     </p>
     <p>
-        Przy każdym wierszu (poza pierwszym) znajduje się znak
-        <span class="text-red-400 p-3 text-xl font-bold">x</span>. Jego kliknięcie spowoduje usunięcie wiersza.
-        Usunięcie wiersza sprawi, że wynik zostanie przeliczony na nowo.
+        Neben jeder Zeile (außer der ersten) befindet sich das Symbol
+        <span class="text-red-400 p-3 text-xl font-bold">x</span>. Ein Klick darauf wird die Zeile entfernen.
+        Das Entfernen einer Zeile führt dazu, dass das Ergebnis neu berechnet wird.
     </p>
     <p>
-        Po każdym wpisaniu danych, następuje przeliczenie średniej ważonej i wyświetlenie wyniku.
-    </p>
-
-    <h3>Co to jest średnia ważona?</h3>
-    <p>
-        <strong>Średnia ważona</strong> to statystyczny wskaźnik,
-        który umożliwia uwzględnienie różnych wag poszczególnych elementów składowych przy obliczaniu średniej.
-        Jest to szczególnie przydatne, gdy chcemy określić jakiś wspólny mianownik dla elementów o różnych wartościach lub znaczeniach.
-        Średnia ważona jest często stosowana w różnego rodzaju rankingach oraz przy ocenie osiągnięć, takich jak wyniki w nauce czy w pracy.
+        Nach jeder Dateneingabe wird das gewichtete Mittel neu berechnet und das Ergebnis angezeigt.
     </p>
 
-    <h3>Jak obliczyć średnią ważoną?</h3>
+    <h3>Was ist das gewichtete Mittel?</h3>
     <p>
-        Aby obliczyć średnią ważoną, należy posłużyć się następującym wzorem:
+        <strong>Das gewichtete Mittel</strong> ist ein statistischer Wert, der es ermöglicht,
+        die unterschiedlichen Gewichtungen einzelner Komponenten bei der Berechnung eines Durchschnitts zu
+        berücksichtigen.
+        Dies ist besonders nützlich, wenn wir einen gemeinsamen Nenner für Elemente mit unterschiedlichen Werten oder
+        Bedeutungen bestimmen möchten.
+        Das gewichtete Mittel wird häufig in verschiedenen Arten von Rankings und bei der Bewertung von Leistungen, wie
+        z.B. Schulleistungen oder Arbeitsleistungen, verwendet.
     </p>
-    <code>(wartość1 * waga1 + wartość2 * waga2 + ... + wartośćN * wagaN) / (waga1 + waga2 + ... + wagaN)</code>
+
+    <h3>Wie berechnet man das gewichtete Mittel?</h3>
     <p>
-        Gdzie:
+        Um das gewichtete Mittel zu berechnen, verwendet man folgende Formel:
+    </p>
+    <code>(Wert1 * Gewicht1 + Wert2 * Gewicht2 + ... + WertN * GewichtN) / (Gewicht1 + Gewicht2 + ... + GewichtN)</code>
+    <p>
+        Wo:
     </p>
     <ul>
         <li>
-            <i>wartość1, wartość2, ..., wartośćN</i> to poszczególne elementy składowe, których chcemy uwzględnić w obliczeniach
+            <i>Wert1, Wert2, ..., WertN</i> sind die einzelnen Komponenten, die in die Berechnung einbezogen werden
+            sollen
         </li>
         <li>
-            <i>waga1, waga2, ..., wagaN</i> to odpowiednie wagi dla poszczególnych elementów
+            <i>Gewicht1, Gewicht2, ..., GewichtN</i> sind die entsprechenden Gewichte für die einzelnen Komponenten
         </li>
     </ul>
-    <h3>Przykład obliczenia średniej ważonej</h3>
+
+    Here is the translation of the provided HTML content into German:
+
+    <h3>Beispiel für die Berechnung des gewichteten Mittels</h3>
     <p>
-        Załóżmy, że mamy następujące oceny i wagi punktowe:
+        Nehmen wir an, wir haben die folgenden Noten und Gewichtungen:
     </p>
     <ul>
-        <li>matematyka: ocena 5, waga 2</li>
-        <li>język polski: ocena 4, waga 3</li>
-        <li>fizyka: ocena 3, waga 3</li>
-        <li>chemia: ocena 4, waga 2</li>
+        <li>Mathematik: Note 5, Gewicht 2</li>
+        <li>Polnisch: Note 4, Gewicht 3</li>
+        <li>Physik: Note 3, Gewicht 3</li>
+        <li>Chemie: Note 4, Gewicht 2</li>
     </ul>
     <p>
-        Aby obliczyć średnią ważoną, należy wprowadzić te dane do wzoru:
+        Um das gewichtete Mittel zu berechnen, setzen wir diese Daten in die Formel ein:
     </p>
     <code>(5 * 2 + 4 * 3 + 3 * 3 + 4 * 2) / (2 + 3 + 3 + 2) = (10 + 12 + 9 + 8) / 10 = 39/10 = 3,9</code>
     <p>
-        W takim przypadku nasza średnia ważona wynosi 3,9.
+        In diesem Fall beträgt unser gewichtetes Mittel 3,9.
     </p>
 
-    <h3>Zastosowania średniej ważonej</h3>
+    <h3>Anwendungen des gewichteten Mittels</h3>
     <p>
-        Średnia ważona jest często stosowana w różnego rodzaju rankingach oraz przy ocenie osiągnięć,
-        takich jak wyniki w nauce czy w pracy. Możemy ją wykorzystać między innymi w następujących sytuacjach:
+        Das gewichtete Mittel wird häufig in verschiedenen Arten von Rankings und bei der Bewertung von Leistungen
+        verwendet,
+        wie zum Beispiel bei schulischen Ergebnissen oder bei der Arbeit. Es kann unter anderem in folgenden Situationen
+        genutzt werden:
     </p>
     <ul>
         <li>
-            obliczenie średniej ocen na świadectwie szkolnym lub dyplomie ukończenia uczelni -
-            w takim przypadku waga poszczególnych przedmiotów może być uzależniona od ich trudności
-            lub znaczenia dla danego kierunku studiów;
+            Berechnung des Notendurchschnitts auf dem Schulzeugnis oder dem Universitätsdiplom -
+            in solchen Fällen kann das Gewicht einzelner Fächer von ihrer Schwierigkeit oder ihrer Bedeutung für den
+            Studiengang abhängen;
         </li>
         <li>
-            ocena efektywności pracowników w firmie -
-            średnia ważona pozwala uwzględnić różne wagi poszczególnych zadań lub projektów,
-            dzięki czemu można uzyskać bardziej sprawiedliwe porównanie wyników pracy poszczególnych pracowników;
+            Bewertung der Mitarbeiterleistung in einem Unternehmen -
+            das gewichtete Mittel ermöglicht es, die unterschiedlichen Gewichte einzelner Aufgaben oder Projekte zu
+            berücksichtigen,
+            wodurch ein gerechterer Vergleich der Arbeitsergebnisse einzelner Mitarbeiter erzielt werden kann;
         </li>
         <li>
-            określenie średniej ceny produktów lub usług -
-            średnia ważona pozwala uwzględnić różne wagi poszczególnych produktów lub usług,
-            co jest szczególnie istotne w przypadku, gdy ich ceny różnią się znacząco;
+            Bestimmung des Durchschnittspreises von Produkten oder Dienstleistungen -
+            das gewichtete Mittel ermöglicht es, die unterschiedlichen Gewichte einzelner Produkte oder Dienstleistungen
+            zu berücksichtigen,
+            was besonders wichtig ist, wenn ihre Preise stark variieren;
         </li>
         <li>
-            ocena efektywności reklam w internecie -
-            średnia ważona pozwala uwzględnić różne wagi poszczególnych kanałów reklamowych lub grup odbiorców,
-            dzięki czemu można uzyskać bardziej sprawiedliwe porównanie skuteczności reklam.
+            Bewertung der Effektivität von Online-Werbung -
+            das gewichtete Mittel ermöglicht es, die unterschiedlichen Gewichte einzelner Werbekanäle oder Zielgruppen
+            zu berücksichtigen,
+            wodurch ein gerechterer Vergleich der Werbewirksamkeit möglich ist.
         </li>
     </ul>
-    <h4>Komu może się przydać kalkulator średniej ważonej?</h4>
-    <p>
-        Kalkulator średniej ważonej może być przydatny w różnych sytuacjach i dla różnych grup osób.
-        Oto kilka przykładów:
-    </p>
-    <ol>
-        <li>
-            Studentom i uczniom: Kalkulator średniej ważonej może być przydatny w przypadku,
-            gdy wagi przypisywane są do różnych ocen lub kategorii ocen.
-            Na przykład, gdy oceny z testów mają większą wagę niż oceny z prac domowych,
-            obliczenie średniej ważonej pozwoli uzyskać bardziej dokładne podsumowanie osiągnięć.
-        </li>
-        <li>
-            Inwestorom i finansistom: Kalkulator średniej ważonej może być stosowany w analizie portfela inwestycyjnego.
-            Jeśli różne aktywa mają różne wagi lub udziały,
-            obliczenie średniej ważonej cen lub zwrotów pozwoli na dokładniejsze zrozumienie całkowitego wyniku inwestycji.
-        </li>
-        <li>
-            Badaczom naukowym: W przypadku prowadzenia badań naukowych,
-            kalkulator średniej ważonej może być używany do agregacji wyników z różnych eksperymentów,
-            z uwzględnieniem wagi każdego eksperymentu.
-            To pozwala na bardziej precyzyjne podsumowanie wyników i wydobycie istotnych trendów.
-        </li>
-        <li>
-            Ekonomistom i statystykom: Kalkulator średniej ważonej jest również ważnym narzędziem w analizie ekonomicznej
-            i statystycznej. Może być stosowany, gdy istnieją różne wagi dla różnych obserwacji lub grup obserwacji.
-            Na przykład, przy obliczaniu średnich wskaźników gospodarczych lub inflacji,
-            można przypisać większą wagę do określonych sektorów lub kategorii.
-        </li>
-        <li>
-            Projektantom systemów oceny: Osoby projektujące systemy oceny w różnych dziedzinach,
-            takich jak sport, sztuka czy konkursy,
-            mogą skorzystać z kalkulatora średniej ważonej do ustalenia wag dla różnych kryteriów oceny.
-            To umożliwia uwzględnienie różnej istotności poszczególnych kryteriów przy ostatecznym podsumowaniu wyników.
-        </li>
-    </ol>
-    <p>
-        To tylko kilka przykładów, w których kalkulator średniej ważonej może być przydatny.
-        Ogólnie rzecz biorąc, jest on użyteczny wszędzie tam,
-        gdzie istnieje potrzeba uwzględnienia różnych wag dla różnych elementów lub kategorii,
-        w celu uzyskania bardziej trafnych i adekwatnych wyników.
-    </p>
 
-    <h4>Podsumowanie</h4>
+    <h3>Anwendungen des gewichteten Mittels</h3>
     <p>
-        <strong>Średnia ważona</strong> to statystyczny wskaźnik, który umożliwia obliczenie średniej wartości,
-        uwzględniając różne wagi poszczególnych elementów składowych.
-        Jest to szczególnie przydatne w przypadku,
-        gdy chcemy określić jakiś wspólny mianownik dla elementów o różnych wartościach lub znaczeniach.
-        Średnia ważona jest często stosowana w różnego rodzaju rankingach oraz przy ocenie osiągnięć,
-        takich jak wyniki w nauce czy w pracy. Aby obliczyć średnią ważoną, należy posłużyć się prostym wzorem,
-        który uwzględnia wagi poszczególnych elementów. Dzięki średniej ważonej możemy uzyskać bardziej precyzyjne
-        i obiektywne wyniki, które uwzględniają różnice między poszczególnymi elementami.
+        Das gewichtete Mittel wird häufig in verschiedenen Arten von Rankings und bei der Bewertung von Leistungen
+        verwendet,
+        wie zum Beispiel bei schulischen Ergebnissen oder bei der Arbeit. Es kann unter anderem in folgenden Situationen
+        genutzt werden:
+    </p>
+    <ul>
+        <li>
+            Berechnung des Notendurchschnitts auf dem Schulzeugnis oder dem Universitätsdiplom -
+            in solchen Fällen kann das Gewicht einzelner Fächer von ihrer Schwierigkeit oder ihrer Bedeutung für den
+            Studiengang abhängen;
+        </li>
+        <li>
+            Bewertung der Mitarbeiterleistung in einem Unternehmen -
+            das gewichtete Mittel ermöglicht es, die unterschiedlichen Gewichte einzelner Aufgaben oder Projekte zu
+            berücksichtigen,
+            wodurch ein gerechterer Vergleich der Arbeitsergebnisse einzelner Mitarbeiter erzielt werden kann;
+        </li>
+        <li>
+            Bestimmung des Durchschnittspreises von Produkten oder Dienstleistungen -
+            das gewichtete Mittel ermöglicht es, die unterschiedlichen Gewichte einzelner Produkte oder Dienstleistungen
+            zu berücksichtigen,
+            was besonders wichtig ist, wenn ihre Preise stark variieren;
+        </li>
+        <li>
+            Bewertung der Effektivität von Online-Werbung -
+            das gewichtete Mittel ermöglicht es, die unterschiedlichen Gewichte einzelner Werbekanäle oder Zielgruppen
+            zu berücksichtigen,
+            wodurch ein gerechterer Vergleich der Werbewirksamkeit möglich ist.
+        </li>
+    </ul>
+
+    Here is the translation of the provided HTML content into German:
+
+    <h4>Zusammenfassung</h4>
+    <p>
+        <strong>Das gewichtete Mittel</strong> ist ein statistischer Wert, der die Berechnung des Durchschnittswertes
+        ermöglicht,
+        wobei die unterschiedlichen Gewichte der einzelnen Komponenten berücksichtigt werden.
+        Dies ist besonders nützlich, wenn wir einen gemeinsamen Nenner für Elemente mit unterschiedlichen Werten oder
+        Bedeutungen bestimmen möchten.
+        Das gewichtete Mittel wird häufig in verschiedenen Rankings und bei der Bewertung von Leistungen verwendet,
+        wie zum Beispiel bei Schulleistungen oder im Beruf. Um das gewichtete Mittel zu berechnen, verwendet man eine
+        einfache Formel,
+        die die Gewichte der einzelnen Komponenten berücksichtigt. Dank des gewichteten Mittels können wir genauere
+        und objektivere Ergebnisse erzielen, die die Unterschiede zwischen den einzelnen Elementen berücksichtigen.
     </p>
 @endsection

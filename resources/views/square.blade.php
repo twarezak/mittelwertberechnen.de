@@ -1,20 +1,21 @@
 @extends('app')
 
-@section('title', 'Średnia kwadratowa - kalkulator średniej kwadratowej')
-@section('description', 'Kalkulator średniej kwadratowej - szybko i łatwo oblicz średnią kwadratową swoich danych z naszym prostym i niezawodnym kalkulatorem.')
-@section('keywords', 'średnia kwadratowa, kalkulator średniej kwadratowej')
+@section('title', 'Quadratisches Mittel - Rechner für das quadratische Mittel')
+@section('description', 'Rechner für das quadratische Mittel - berechnen Sie schnell und einfach das quadratische Mittel Ihrer Daten mit unserem einfachen und zuverlässigen Rechner.')
+@section('keywords', 'quadratisches Mittel, Rechner für das quadratische Mittel')
 
 @section('content')
     <p>
-        <strong>Kalkulator średniej kwadratowej</strong>  to narzędzie, które pozwala na szybkie i łatwe
-        obliczanie średniej kwadratowej dla Twoich danych.
-        Obliczenie średniej kwadratowej nigdy nie było łatwiejsze, wystarczy wstawić swoje dane odpowiednie pole,
-        aby otrzymać wynik.
+        Der <strong>Rechner für das quadratische Mittel</strong> ist ein Werkzeug, das eine schnelle und einfache
+        Berechnung des quadratischen Mittels Ihrer Daten ermöglicht.
+        Die Berechnung des quadratischen Mittels war noch nie einfacher, geben Sie einfach Ihre Daten in das
+        entsprechende Feld ein,
+        um das Ergebnis zu erhalten.
     </p>
 
     @include('ads.ad-top')
     <div class="square rounded p-5 bg-gradient-to-r from-zinc-100 via-gray-100 to-zinc-100 shadow-2xl">
-        <label for="precision" class="text-xs block mb-5 text-right">Liczba po przecinku (precyzja)
+        <label for="precision" class="text-xs block mb-5 text-right">Zahl nach dem Dezimalpunkt (Genauigkeit)
             <select class="w-12 h-8 p-2 text-xs" id="precision">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -30,84 +31,92 @@
             <textarea class="w-full">2; 4; 6</textarea>
         </label>
         <div class="p-5 text-center text-sm">
-            średnia kwadratowa wynosi:
+            Der rationale Mittelwert ist:
             <div class="p-2 text-2xl font-bold result">4.32</div>
         </div>
     </div>
 
     @include('ads.ad-bottom')
 
-    <h2>Kalkulator średniej kwadratowej</h2>
+    <h2>Rechner für das quadratische Mittel</h2>
     <p>
-        Nasz <strong>kalkulator średniej kwadratowej</strong> to niezawodne narzędzie do obliczania średniej kwadratowej dla Twoich danych.
-        Kalkulator posiada przejrzysty interfejs z polem tekstowym do wprowadzenia liczb, które należy oddzielić średnikiem.
-        Możliwe jest także ustawienie dokładności wyniku - ilości miejsc po przecinku, zakres od 0 do 8,
-        domyślnie 2 miejsca po przecinku. Wynik pojawia się automatycznie po wprowadzeniu liczb,
-        co pozwala na szybkie i łatwe obliczanie średniej kwadratowej.
-        Skorzystaj z naszego kalkulatora i ciesz się precyzyjnymi i szybkimi wynikami.
+        Unser <strong>Rechner für das quadratische Mittel</strong> ist ein zuverlässiges Werkzeug zur Berechnung des
+        quadratischen Mittels für Ihre Daten.
+        Der Rechner bietet eine übersichtliche Benutzeroberfläche mit einem Textfeld zur Eingabe von Zahlen, die durch
+        ein Semikolon getrennt sein müssen.
+        Es ist auch möglich, die Genauigkeit des Ergebnisses einzustellen - die Anzahl der Dezimalstellen, von 0 bis 8,
+        standardmäßig 2 Dezimalstellen. Das Ergebnis erscheint automatisch nach der Eingabe der Zahlen,
+        was eine schnelle und einfache Berechnung des quadratischen Mittels ermöglicht.
+        Nutzen Sie unseren Rechner und profitieren Sie von präzisen und schnellen Ergebnissen.
     </p>
 
-    <h3>Co to jest średnia kwadratowa?</h3>
+    <h3>Was ist das quadratische Mittel?</h3>
     <p>
-        <strong>Średnia kwadratowa</strong>, jest to pierwiastek z sumy kwadratów wartości podzielonej przez liczbę wartości.
-        Wzór na średnią kwadratową wygląda następująco:
+        Das <strong>quadratische Mittel</strong>, auch bekannt als root mean square (RMS), ist die Wurzel aus der Summe
+        der Quadrate der Werte geteilt durch die Anzahl der Werte.
+        Die Formel für das quadratische Mittel sieht wie folgt aus:
     </p>
-    <img src="{{ asset('img/srednia-kwadratowa-wzor.png') }}" alt="Średnia kwadratowa - wzór"
+    <img src="{{ asset('img/quadratisches-mittel-formel.png') }}" alt="Quadratisches Mittel - Formel"
          class="mt-5 mx-auto">
     <p>
-        gdzie <code>x<sub>1</sub>, x<sub>2</sub>, ...x<sub>n</sub></code>
-        to poszczególne wartości z danego zbioru, a <code>n</code> to ich liczba.
+        wobei <code>x<sub>1</sub>, x<sub>2</sub>, ...x<sub>n</sub></code>
+        die einzelnen Werte aus der gegebenen Menge sind und <code>n</code> ihre Anzahl ist.
     </p>
 
-    <h3>Obliczanie średniej kwadratowej</h3>
+    <h3>Berechnung des quadratischen Mittels</h3>
     <p>
-        Aby obliczyć średnią kwadratową, należy postępować według następujących kroków:
+        Um das quadratische Mittel zu berechnen, sollten Sie die folgenden Schritte durchführen:
     </p>
     <ul>
         <li>
-            Podstawiamy wartości do wzoru i podnosimy każdą wartość do kwadratu.
+            Setzen Sie die Werte in die Formel ein und quadrieren Sie jede Zahl.
         </li>
         <li>
-            Sumujemy te kwadraty.
+            Addieren Sie diese Quadrate.
         </li>
         <li>
-            Dzielimy sumę przez liczbę wartości.
+            Teilen Sie die Summe durch die Anzahl der Werte.
         </li>
         <li>
-            Pierwiastkujemy otrzymaną wartość.
+            Ziehen Sie die Wurzel aus dem erhaltenen Wert.
         </li>
         <li>
-            Zastosowanie średniej kwadratowej
+            Anwendung des quadratischen Mittels
         </li>
     </ul>
-    <h3>Zastosowanie średniej kwadratowej</h3>
+
+    <h3>Anwendung des quadratischen Mittels</h3>
     <p>
-        Średnia kwadratowa jest często stosowana w statystyce, zwłaszcza w analizie danych.
-        Może być również używana w różnych dziedzinach nauki, takich jak fizyka czy chemia.
-        Jest to szczególnie przydatne w przypadku badania zmienności danych,
-        ponieważ pozwala na określenie stopnia rozproszenia danych wokół średniej.
+        Das quadratische Mittel wird häufig in der Statistik, insbesondere in der Datenanalyse, eingesetzt.
+        Es kann auch in verschiedenen wissenschaftlichen Bereichen wie der Physik oder Chemie verwendet werden.
+        Es ist besonders nützlich für die Untersuchung der Variabilität von Daten,
+        da es den Grad der Streuung der Daten um den Durchschnitt herum bestimmt.
     </p>
     <p>
-        Jednym z przykładów zastosowania średniej kwadratowej jest analiza wariancji w statystyce.
-        Wariancja jest miarą zmienności danych, a średnia kwadratowa jest jej pierwiastkiem kwadratowym.
-        Oznacza to, że wariancja jest miarą zmienności danych wyrażoną w jednostkach danych,
-        a średnia kwadratowa jest tą samą miarą wyrażoną w jednostkach danych kwadratowych.
+        Ein Beispiel für die Anwendung des quadratischen Mittels ist die Varianzanalyse in der Statistik.
+        Die Varianz ist ein Maß für die Variabilität von Daten, und das quadratische Mittel ist ihre Quadratwurzel.
+        Das bedeutet, dass die Varianz ein Maß für die Variabilität der Daten in den Einheiten der Daten ist,
+        und das quadratische Mittel ist dasselbe Maß, ausgedrückt in den Einheiten der quadratischen Daten.
     </p>
     <p>
-        Średnia kwadratowa jest również często używana w fizyce, zwłaszcza w termodynamice.
-        W termodynamice, średnia kwadratowa prędkości molekuł jest używana do określenia temperatury cieczy lub gazu.
+        Das quadratische Mittel wird auch oft in der Physik verwendet, insbesondere in der Thermodynamik.
+        In der Thermodynamik wird das quadratische Mittel der Molekülgeschwindigkeiten verwendet, um die Temperatur
+        einer Flüssigkeit oder eines Gases zu bestimmen.
     </p>
     <p>
-        W przypadku nauk ekonomicznych średnia kwadratowa jest używana do obliczania rentowności inwestycji.
-        Rentowność inwestycji jest miarą, jak dobrze inwestycja przynosi zyski w porównaniu do ryzyka.
+        Im Bereich der Wirtschaftswissenschaften wird das quadratische Mittel verwendet, um die Rentabilität von
+        Investitionen zu berechnen.
+        Die Rentabilität einer Investition ist ein Maß dafür, wie gut eine Investition im Verhältnis zum Risiko Gewinne
+        erzielt.
     </p>
-    <h4>Podsumowanie</h4>
+    <h4>Zusammenfassung</h4>
     <p>
-        Podsumowując, <strong>średnia kwadratowa</strong> jest ważnym narzędziem matematycznym,
-        które jest stosowane w wielu dziedzinach nauki i jest przydatne w analizie danych
-        oraz określaniu stopnia rozproszenia danych wokół średniej.
-        Dzięki zrozumieniu tego pojęcia i umiejętności jego obliczania,
-        uczniowie i studenci będą mogli lepiej rozumieć i analizować dane,
-        co przyda im się w przyszłości w różnych dziedzinach nauki i biznesu.
+        Zusammenfassend ist das <strong>quadratische Mittel</strong> ein wichtiges mathematisches Werkzeug,
+        das in vielen Bereichen der Wissenschaft angewendet wird und nützlich in der Datenanalyse ist
+        sowie bei der Bestimmung des Grades der Datenstreuung um den Durchschnitt.
+        Durch das Verständnis dieses Konzepts und die Fähigkeit, es zu berechnen,
+        werden Schüler und Studenten Daten besser verstehen und analysieren können,
+        was ihnen in Zukunft in verschiedenen wissenschaftlichen und geschäftlichen Bereichen zugutekommen wird.
     </p>
+
 @endsection

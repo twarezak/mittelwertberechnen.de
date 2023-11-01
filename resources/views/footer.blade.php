@@ -4,15 +4,15 @@
             <div class="w-full lg:w-2/5 -mx-6">
                 <div class="px-6">
                     <div>
-                        <a href="{{ route('home_page') }}" title="kalkulator średniej" class="text-xl font-bold text-gray-900">{{ $siteTitle }}</a>
+                        <a href="{{ route('home_page') }}" title="Mittelwert Berechnen"
+                           class="text-xl font-bold text-gray-900">{{ $siteTitle }}</a>
                     </div>
 
                     <p class="mt-2 text-gray-800 max-w-md text-sm">
-                        KalkulatorSredniej.pl to twoje skuteczne rozwiązanie, zapewniające natychmiastowe
-                        i precyzyjne obliczenia różnych rodzajów średnich.
-                        Szybko poznasz ogólny trend danych i zaoszczędzisz czas,
-                        dzięki naszym łatwym w użyciu i niezawodnym kalkulatorom.
-                        Z nami obliczenia średnich nie będą już problemem!
+                        MittelwertBerechnen.de ist Ihre effiziente Lösung für die schnelle und präzise Berechnung von
+                        Mittelwerten aller Art. Mit unseren einfach zu bedienenden und zuverlässigen Kalkulatoren
+                        erkennen Sie schnell den allgemeinen Trend Ihrer Daten und sparen Zeit. Mit uns ist die
+                        Berechnung von Mittelwerten kein Problem mehr!
                     </p>
                 </div>
             </div>
@@ -20,8 +20,8 @@
                 <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
                     <div>
                         <strong class="text-xl font-bold text-gray-900">Informacje</strong>
-                        <a href="{{ route('cookies') }}" title="Polityka prywatności" class="footer-link">Polityka prywatności</a>
-                        <a href="{{ route('about') }}" class="footer-link" title="O stronie">O stronie</a>
+                        <a href="{{ route('cookies') }}" title="Datenschutz" class="footer-link">Datenschutz</a>
+                        <a href="{{ route('about') }}" class="footer-link" title="Über die Seite">Über die Seite</a>
                         <a href="{{ route('contact') }}" class="footer-link" title="Kontakt">Kontakt</a>
                     </div>
                 </div>
