@@ -1,98 +1,97 @@
 @extends('app')
 
-@section('title', 'Odchylenie standardowe - miara rozproszenia wokół średniej')
-@section('description', 'Przeczytaj o odchyleniu standardowym jako mierze rozproszenia wokół średniej. Dowiedz się, jak je i jak jest stosowane w różnych dziedzinach.')
-@section('keywords', 'odchylenie standardowe')
+@section('title', 'Standardabweichung - ein Maß für die Streuung um den Durchschnitt')
+@section('description', 'Lesen Sie über die Standardabweichung als Maß für die Streuung um den Durchschnitt. Erfahren Sie, wie sie berechnet wird und wie sie in verschiedenen Bereichen angewendet wird.')
+@section('keywords', 'Standardabweichung')
 
 @section('content')
     <p>
-        <strong>Odchylenie standardowe</strong> to jedna z najważniejszych miar rozproszenia danych wokół średniej.
-        Jest ona często używana w różnych dziedzinach, takich jak nauki społeczne, nauki przyrodnicze, ekonomia,
-        finanse i wiele innych. W tym artykule omówimy, czym jest odchylenie standardowe,
-        jak je obliczyć oraz jak można go zastosować.
+        Die <strong>Standardabweichung</strong> ist eines der wichtigsten Streuungsmaße für Daten rund um den Durchschnitt.
+        Sie wird häufig in verschiedenen Bereichen wie den Sozialwissenschaften, Naturwissenschaften, Wirtschaft,
+        Finanzen und vielen anderen verwendet. In diesem Artikel werden wir besprechen, was die Standardabweichung ist,
+        wie sie berechnet wird und wie sie angewendet werden kann.
     </p>
-    <h2>Czym jest odchylenie standardowe?</h2>
+    <h2>Was ist die Standardabweichung?</h2>
     <p>
-        Odchylenie standardowe to miara rozproszenia danych wokół średniej.
-        Oznacza ono, jak bardzo dane różnią się od średniej.
-        Im większe odchylenie standardowe, tym większa jest rozproszenie danych.
+        Die Standardabweichung ist ein Maß für die Streuung der Daten um den Durchschnitt.
+        Sie zeigt, wie sehr sich die Daten vom Durchschnitt unterscheiden.
+        Je größer die Standardabweichung ist, desto größer ist die Streuung der Daten.
     </p>
-    <h3>Dlaczego warto używać odchylenia standardowego?</h3>
+
+    <h3>Warum sollte man die Standardabweichung verwenden?</h3>
     <p>
-        Odchylenie standardowe jest bardzo przydatne, ponieważ pozwala nam na szybkie i łatwe określenie,
-        jak bardzo dane są skoncentrowane wokół średniej. Dzięki temu można ocenić,
-        czy dane są stabilne czy też nie, a także pomaga w porównywaniu różnych zbiorów danych.
+        Die Standardabweichung ist sehr nützlich, weil sie uns erlaubt, schnell und einfach zu bestimmen,
+        wie konzentriert die Daten um den Durchschnitt liegen. Dadurch kann man beurteilen,
+        ob die Daten stabil sind oder nicht, und sie hilft auch beim Vergleich verschiedener Datensätze.
     </p>
-    <h3>Jak obliczyć odchylenie standardowe?</h3>
+    <h3>Wie berechnet man die Standardabweichung?</h3>
     <p>
-        Aby obliczyć odchylenie standardowe, należy:
+        Um die Standardabweichung zu berechnen, sollten Sie:
     </p>
     <ol>
         <li>
-            Oblicz średnią danych.
+            Den Durchschnitt der Daten berechnen.
         </li>
         <li>
-            Oblicz różnicę między każdą wartością danych a średnią.
+            Die Differenz zwischen jedem Datenwert und dem Durchschnitt berechnen.
         </li>
         <li>
-            Podnieś każdą z tych różnic do kwadratu.
+            Jede dieser Differenzen quadrieren.
         </li>
         <li>
-            Oblicz średnią arytmetyczną z tych kwadratów.
+            Das arithmetische Mittel dieser Quadrate berechnen.
         </li>
         <li>
-            Wyciągnij pierwiastek kwadratowy z tej średniej arytmetycznej.
+            Die Quadratwurzel aus diesem arithmetischen Mittel ziehen.
         </li>
     </ol>
     <p>
-        Wzór na obliczenie odchylenia standardowego wygląda następująco:<br />
-        <code>σ = √(∑(x<sub>i</sub>-x)²/n )</code>, gdzie:<br />
-        σ - odchylenie standardowe<br />
-        x<sub>i</sub> - wartość i-tej obserwacji<br />
-        x - średnia wartość<br />
-        n - liczba obserwacji
-    </p>
-    <h3>Przykłady zastosowania odchylenia standardowego</h3>
-    <p>
-        Odchylenie standardowe znajduje zastosowanie w wielu dziedzinach, w tym w ekonomii, fizyce, medycynie,
-        psychologii, socjologii i innych naukach społecznych.
-        Poniżej przedstawiamy kilka przykładów zastosowania odchylenia standardowego w praktyce.
-    </p>
-    <p>
-        <strong>Nauki przyrodnicze</strong>: odchylenie standardowe jest często stosowane w naukach przyrodniczych
-        do oceny dokładności pomiarów. Można go zastosować, aby sprawdzić,
-        czy wyniki pomiarów są stabilne i czy są zbliżone do rzeczywistych wartości.
-    </p>
-    <p>
-        <strong>Analiza rynku finansowego</strong>: W dziedzinie finansowej,
-        odchylenie standardowe jest używane do mierzenia zmienności cen akcji i innych instrumentów finansowych.
-        Im wyższe odchylenie standardowe, tym większe ryzyko inwestycyjne.
-        Inwestorzy używają odchylenia standardowego do oceny ryzyka i podejmowania decyzji inwestycyjnych.
-    </p>
-    <p>
-        <strong>Nauki społeczne</strong>: w naukach społecznych odchylenie standardowe jest używane do oceny
-        rozproszenia danych wokół średniej. Można go zastosować, aby zbadać,
-        czy dane z różnych grup są podobne czy różnią się od siebie.
-    </p>
-    <p>
-        <strong>Analiza danych medycznych</strong>: w medycynie, odchylenie standardowe
-        jest używane do mierzenia zmienności wyników badań laboratoryjnych i innych pomiarów.
-        Odchylenie standardowe pomaga określić, czy wyniki są stabilne i niezmienne.
-        W badaniach klinicznych odchylenie standardowe jest stosowane do określania skuteczności leków
-        i innych interwencji medycznych.
-    </p>
-    <p>
-        <strong>Przykład z fizyki</strong>: w fizyce, odchylenie standardowe jest używane do mierzenia niepewności pomiaru.
-        Im mniejsze odchylenie standardowe, tym bardziej precyzyjny jest pomiar.
-        Odchylenie standardowe jest również stosowane do określania dokładności i precyzji instrumentów pomiarowych.
+        Die Formel zur Berechnung der Standardabweichung lautet wie folgt:<br />
+        <code>σ = √(∑(x<sub>i</sub>-x)²/n )</code>, wobei:<br />
+        σ - die Standardabweichung<br />
+        x<sub>i</sub> - der Wert der i-ten Beobachtung<br />
+        x - der Durchschnittswert<br />
+        n - die Anzahl der Beobachtungen
     </p>
 
-    <h4>Podsumowanie</h4>
+    <h3>Anwendungsbeispiele für die Standardabweichung</h3>
     <p>
-        Odchylenie standardowe to ważna miara rozproszenia danych wokół średniej.
-        Jest ono stosowane w wielu dziedzinach, w tym w finansach, fizyce, medycynie, psychologii i socjologii.
-        Odchylenie standardowe pomaga określić, jak bardzo dane są rozproszone i jak precyzyjne są pomiary.
-        Warto zrozumieć, jak działa ta miara, aby móc stosować ją w praktyce.
+        Die Standardabweichung wird in vielen Bereichen verwendet, einschließlich Wirtschaft, Physik, Medizin,
+        Psychologie, Soziologie und anderen Sozialwissenschaften.
+        Im Folgenden stellen wir einige praktische Anwendungen der Standardabweichung vor.
+    </p>
+    <p>
+        <strong>Naturwissenschaften</strong>: Die Standardabweichung wird häufig in den Naturwissenschaften
+        zur Bewertung der Genauigkeit von Messungen verwendet. Sie kann angewendet werden, um zu prüfen,
+        ob Messergebnisse stabil sind und ob sie den tatsächlichen Werten nahekommen.
+    </p>
+    <p>
+        <strong>Finanzmarktanlyse</strong>: Im Finanzsektor wird die Standardabweichung verwendet, um die Volatilität von Aktienkursen und anderen Finanzinstrumenten zu messen.
+        Je höher die Standardabweichung, desto höher das Investitionsrisiko.
+        Investoren verwenden die Standardabweichung, um Risiken zu bewerten und Investitionsentscheidungen zu treffen.
+    </p>
+    <p>
+        <strong>Sozialwissenschaften</strong>: In den Sozialwissenschaften wird die Standardabweichung verwendet, um die Streuung von Daten um den Durchschnitt zu bewerten.
+        Sie kann angewendet werden, um zu untersuchen, ob Daten aus verschiedenen Gruppen ähnlich oder unterschiedlich sind.
+    </p>
+    <p>
+        <strong>Medizinische Datenauswertung</strong>: In der Medizin wird die Standardabweichung verwendet, um die Variabilität von Laborergebnissen und anderen Messungen zu messen.
+        Die Standardabweichung hilft festzustellen, ob Ergebnisse stabil und konsistent sind.
+        In klinischen Studien wird die Standardabweichung verwendet, um die Wirksamkeit von Medikamenten
+        und anderen medizinischen Interventionen zu bestimmen.
+    </p>
+    <p>
+        <strong>Beispiel aus der Physik</strong>: In der Physik wird die Standardabweichung verwendet, um die Messunsicherheit zu messen.
+        Je kleiner die Standardabweichung, desto präziser ist die Messung.
+        Die Standardabweichung wird auch verwendet, um die Genauigkeit und Präzision von Messinstrumenten zu bestimmen.
+    </p>
+
+    <h4>Zusammenfassung</h4>
+    <p>
+        Die Standardabweichung ist ein wichtiges Maß für die Streuung von Daten um den Durchschnitt.
+        Sie wird in vielen Bereichen verwendet, einschließlich Finanzen, Physik, Medizin, Psychologie und Soziologie.
+        Die Standardabweichung hilft zu bestimmen, wie stark die Daten gestreut sind und wie präzise die Messungen sind.
+        Es ist wertvoll, zu verstehen, wie dieses Maß funktioniert, um es in der Praxis anwenden zu können.
     </p>
 
 @endsection

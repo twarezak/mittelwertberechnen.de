@@ -1,36 +1,48 @@
 @extends('app')
 
-@section('title', 'Ćwiczenia i zadania na obliczanie średnich')
-@section('description', 'Ćwiczenia i zadania dotyczące średniej arytmetycznej, średniej ważonej, średniej harmonicznej oraz średniej geometrycznej.')
-@section('keywords', 'średnia kwadratowa, kalkulator średniej kwadratowej')
+@section('title', 'Übungen und Aufgaben zur Berechnung von Durchschnitten')
+@section('description', 'Übungen und Aufgaben zu arithmetischem Mittel, gewichtetem Mittel, harmonischem Mittel und geometrischem Mittel.')
+@section('keywords', 'quadratisches Mittel, Rechner für das quadratische Mittel')
 
 @section('content')
     <p>
-        W tej części serwisu znajdziesz zadania pozwalające na utrwalenie umiejętności obliczania różnych rodzajów średnich.
-        Znajdziesz tu zadania dotyczące średniej arytmetycznej, średniej ważonej, średniej harmonicznej oraz średniej geometrycznej.
-        Wszystkie zadania zostały przygotowane tak, by stopniowo zwiększać trudność i pozwolić na stopniowe opanowanie tematu.
+        In diesem Teil der Website finden Sie Aufgaben, die Ihnen helfen, die Fähigkeiten zur Berechnung verschiedener
+        Arten von Durchschnitten zu festigen.
+        Hier finden Sie Aufgaben zum arithmetischen Mittel, gewichteten Mittel, harmonischen Mittel und geometrischen
+        Mittel.
+        Alle Aufgaben sind so konzipiert, dass sie schrittweise schwieriger werden und Ihnen helfen, das Thema
+        schrittweise zu meistern.
     </p>
 
-    <h2>Zadania</h2>
+    <h2>Aufgaben</h2>
     <ol class="space-y-4">
-        <li>Oblicz średnią arytmetyczną dla liczb: 2, 4, 6, 8, 10.</li>
-        <li>Oblicz średnią ważoną dla liczb: 2 (waga 2), 4 (waga 3), 6 (waga 1), 8 (waga 2), 10 (waga 1).</li>
-        <li>Oblicz średnią harmoniczną dla liczb: 2, 4, 6, 8, 10.</li>
-        <li>Oblicz średnią geometryczną dla liczb: 2, 4, 6, 8, 10.</li>
-        <li>Dla danych liczb: 2, 4, 6, 8, 10 i ich odpowiadających wag: 2, 3, 1, 2, 1.
-            Oblicz średnią ważoną, średnią harmoniczną i średnią geometryczną.</li>
-        <li>Dla następujących danych liczbowych: 3,6,9,12,15,18,21,24,27,30.
-            Oblicz średnią arytmetyczną, średnią ważoną, średnią harmoniczną i średnią geometryczną.</li>
-        <li>Dla następujących danych liczbowych: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 i ich odpowiadających wag:
-            1, 2, 3, 4, 5, 4, 3, 2, 1. Oblicz średnią ważoną, średnią harmoniczną i średnią geometryczną.</li>
+        <li>Berechne das arithmetische Mittel der Zahlen: 2, 4, 6, 8, 10.</li>
+        <li>Berechne das gewichtete Mittel der Zahlen: 2 (Gewicht 2), 4 (Gewicht 3), 6 (Gewicht 1), 8 (Gewicht 2), 10
+            (Gewicht 1).
+        </li>
+        <li>Berechne das harmonische Mittel der Zahlen: 2, 4, 6, 8, 10.</li>
+        <li>Berechne das geometrische Mittel der Zahlen: 2, 4, 6, 8, 10.</li>
+        <li>Für die folgenden Zahlen: 2, 4, 6, 8, 10 und ihre entsprechenden Gewichte: 2, 3, 1, 2, 1.
+            Berechne das gewichtete Mittel, das harmonische Mittel und das geometrische Mittel.
+        </li>
+        <li>Für die folgenden numerischen Daten: 3,6,9,12,15,18,21,24,27,30.
+            Berechne das arithmetische Mittel, das gewichtete Mittel, das harmonische Mittel und das geometrische
+            Mittel.
+        </li>
+        <li>Für die folgenden numerischen Daten: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 und ihre entsprechenden Gewichte:
+            1, 2, 3, 4, 5, 4, 3, 2, 1. Berechne das gewichtete Mittel, das harmonische Mittel und das geometrische
+            Mittel.
+        </li>
     </ol>
     <p>
-        Mamy nadzieję, że te ćwiczenia pomogły Ci lepiej zrozumieć i opanować temat.
-        Pamiętaj, że regularne powtarzanie i rozwiązywanie zadań to klucz do opanowania każdej nowej umiejętności.
-        Jeśli masz jakiekolwiek pytania lub wątpliwości, nie wahaj się skontaktować z nami.
-        Zachęcamy do regularnego odwiedzania naszej strony i korzystania z nowych zadań i materiałów edukacyjnych.
+        Wir hoffen, dass diese Übungen Ihnen geholfen haben, das Thema besser zu verstehen und zu beherrschen.
+        Denken Sie daran, dass regelmäßiges Wiederholen und Lösen von Aufgaben der Schlüssel zum Meistern jeder neuen
+        Fähigkeit ist.
+        Wenn Sie Fragen oder Zweifel haben, zögern Sie nicht, uns zu kontaktieren.
+        Wir ermutigen Sie, unsere Seite regelmäßig zu besuchen und neue Aufgaben und Bildungsmaterialien zu nutzen.
     </p>
     <p>
-        Wszystkie wyniki możesz oczywiście sprawdzić w kalkulatorach, które znajdziesz na naszej stronie.
+        Sie können alle Ergebnisse natürlich in den Rechnern überprüfen, die Sie auf unserer Website finden.
     </p>
+
 @endsection

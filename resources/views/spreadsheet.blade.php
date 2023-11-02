@@ -1,94 +1,96 @@
 @extends('app')
 
-@section('title', 'Jak obliczyć średnie za pomocą arkusza kalkulacyjnego Google')
-@section('description', 'Dowiedz się, jak łatwo i szybko obliczyć średnie za pomocą arkusza kalkulacyjnego Google Spreadsheet.')
-@section('keywords', 'spreadsheet')
+@section('title', 'Wie man Durchschnitte mit Google Tabellen berechnet')
+@section('description', 'Erfahren Sie, wie Sie mühelos und schnell Durchschnitte mit Google Tabellen (Google Spreadsheet) berechnen können.')
+@section('keywords', 'Tabellenkalkulation')
 
 @section('content')
     <p>
-        Obliczanie różnych średnich za pomocą arkusza kalkulacyjnego Google Spreadsheet jest proste i wygodne.
-        W tym artykule dowiesz się, jak obliczyć najpopularniejsze rodzaje średnich,
-        takie jak średnia arytmetyczna, średnia ważona i średnia harmoniczna.
+        Die Berechnung verschiedener Durchschnitte mit Google Tabellen (Google Spreadsheet) ist einfach und bequem.
+        In diesem Artikel erfahren Sie, wie Sie die beliebtesten Arten von Durchschnitten berechnen,
+        wie das arithmetische Mittel, das gewichtete Mittel und das harmonische Mittel.
     </p>
 
-    <h2>Średnia arytmetyczna</h2>
+    <h2>Arithmetisches Mittel</h2>
     <p>
-        Aby obliczyć średnią arytmetyczną, wprowadź dane do jednej kolumny arkusza kalkulacyjnego,
-        a następnie w innej komórce wpisz formułę <code>=AVERAGE(komórka1:komórka2)</code>,
-        gdzie <code>komórka1</code> i <code>komórka2</code> to pierwsza i ostatnia komórka zawierająca dane.
-        Formuła ta automatycznie obliczy średnią arytmetyczną dla całej serii danych.
-    </p>
-    <h3>Średnia ważona</h3>
-    <p>
-        Aby obliczyć średnią ważoną, potrzebujesz dwóch kolumn: jednej zawierającej dane,
-        a drugiej zawierającej wagi dla każdego danego. Wprowadź dane i wagi do odpowiednich kolumn,
-        a następnie w innej komórce wpisz formułę <code>=SUMPRODUCT(komórka1:komórka2, komórka3:komórka4)/SUM(komórka3:komórka4)</code>>,
-        gdzie <code>komórka1:komórka2</code> to pierwsza i ostatnia komórka z danymi,
-        a <code>komórka3:komórka4</code> to pierwsza i ostatnia komórka z wagami.
-        Formuła ta automatycznie obliczy średnią ważoną dla całej serii danych.
-    </p>
-    <p>
-        W Google Spreadsheet dostępna jest również funkcja <strong>AVERAGE.WEIGHTED</strong>
-        i jest przeznaczona do obliczania średniej ważonej. Jest to specjalna wersja funkcji <strong>AVERAGE</strong>,
-        która uwzględnia wagi dla każdego danego, co pozwala na obliczenie średniej ważonej.
-    </p>
-    <img src="{{ asset('img/arkusze-google.png') }}" alt="AVERAGE.WEIGHTED w Arkuszach Google" class="mt-5 mx-auto">
-    <p>
-        Użycie funkcji <strong>AVERAGE.WEIGHTED</strong> jest bardziej przejrzyste
-        i proste niż ręczne obliczanie średniej ważonej za pomocą funkcji
-        <strong>SUMPRODUCT</strong> i <strong>SUM</strong>.
-        Wymaga ona tylko dwóch argumentów, pierwszym jest zakres komórek zawierających dane a drugi zakres zawierający wagi.
-    </p>
-    <p>
-        Aby obliczyć średnią ważoną za pomocą funkcji <strong>AVERAGE.WEIGHTED</strong> wpisz formułę
-        <code>=AVERAGE.WEIGHTED(komórka1:komórka2, komórka3:komórka4)</code>, gdzie
-        <code>komórka1:komórka2</code> to pierwsza i ostatnia komórka z danymi,
-        a <code>komórka3:komórka4</code> to pierwsza i ostatnia komórka z wagami.
-    </p>
-    <p>
-        W zależności od indywidualnych preferencji, zarówno funkcja <strong>SUMPRODUCT</strong> i <strong>SUM</strong>
-        jak i <strong>AVERAGE.WEIGHTED</strong> pozwalają na obliczanie średniej ważonej.
-        Obie metody dają taki sam wynik, ale ta druga jest bardziej przejrzysta i łatwiejsza w użyciu.
+        Um das arithmetische Mittel zu berechnen, tragen Sie die Daten in eine Spalte des Tabellenkalkulationsblatts ein,
+        und geben Sie dann in einer anderen Zelle die Formel <code>=AVERAGE(Zelle1:Zelle2)</code> ein,
+        wobei <code>Zelle1</code> und <code>Zelle2</code> die erste und die letzte Zelle mit Daten sind.
+        Diese Formel berechnet automatisch das arithmetische Mittel für die gesamte Datenreihe.
     </p>
 
-    <h3>Średnia harmoniczna</h3>
+    <h3>Gewichtetes Mittel</h3>
     <p>
-        Aby obliczyć średnią harmoniczną, wprowadź dane do jednej kolumny arkusza kalkulacyjnego,
-        a następnie w innej komórce wpisz formułę <code>=HARMEAN(komórka1:komórka2)</code>,
-        gdzie <code>komórka1</code> i <code>komórka2</code> to pierwsza i ostatnia komórka zawierająca dane.
-        Formuła ta automatycznie obliczy średnią harmoniczną dla całej serii danych.
+        Um das gewichtete Mittel zu berechnen, benötigen Sie zwei Spalten: eine für die Daten
+        und eine für die Gewichte jedes Wertes. Tragen Sie die Daten und Gewichte in die entsprechenden Spalten ein,
+        und geben Sie dann in einer anderen Zelle die Formel <code>=SUMPRODUCT(Zelle1:Zelle2, Zelle3:Zelle4)/SUM(Zelle3:Zelle4)</code> ein,
+        wobei <code>Zelle1:Zelle2</code> die erste und letzte Zelle mit den Daten
+        und <code>Zelle3:Zelle4</code> die erste und letzte Zelle mit den Gewichten sind.
+        Diese Formel berechnet automatisch das gewichtete Mittel für die gesamte Datenreihe.
     </p>
     <p>
-        Pamiętaj, że w przypadku średniej harmonicznej, dane muszą być liczbami dodatnimi.
-        Jeśli w danych znajdują się liczby ujemne lub zerowe,
-        obliczenie średniej harmonicznej nie będzie możliwe i arkusz kalkulacyjny zwróci błąd.
+        In Google Tabellen ist auch die Funktion <strong>AVERAGE.WEIGHTED</strong> verfügbar,
+        die speziell für die Berechnung des gewichteten Mittels vorgesehen ist. Es ist eine spezielle Version der Funktion <strong>AVERAGE</strong>,
+        die die Gewichte für jeden Wert berücksichtigt und so das gewichtete Mittel berechnet.
+    </p>
+    <img src="{{ asset('img/google-tabellen.png') }}" alt="AVERAGE.WEIGHTED in Google Tabellen" class="mt-5 mx-auto">
+    <p>
+        Die Verwendung der Funktion <strong>AVERAGE.WEIGHTED</strong> ist transparenter
+        und einfacher als die manuelle Berechnung des gewichteten Mittels mit den Funktionen
+        <strong>SUMPRODUCT</strong> und <strong>SUM</strong>.
+        Sie benötigt nur zwei Argumente: den Zellbereich mit den Daten und den Zellbereich mit den Gewichten.
+    </p>
+    <p>
+        Um das gewichtete Mittel mit der Funktion <strong>AVERAGE.WEIGHTED</strong> zu berechnen, geben Sie die Formel
+        <code>=AVERAGE.WEIGHTED(Zelle1:Zelle2, Zelle3:Zelle4)</code> ein, wobei
+        <code>Zelle1:Zelle2</code> die erste und letzte Zelle mit den Daten
+        und <code>Zelle3:Zelle4</code> die erste und letzte Zelle mit den Gewichten sind.
+    </p>
+    <p>
+        Je nach persönlichen Vorlieben bieten sowohl die Funktionen <strong>SUMPRODUCT</strong> und <strong>SUM</strong>
+        als auch <strong>AVERAGE.WEIGHTED</strong> Möglichkeiten zur Berechnung des gewichteten Mittels.
+        Beide Methoden liefern das gleiche Ergebnis, aber die zweite ist transparenter und einfacher zu verwenden.
     </p>
 
-    <h3>Pozostałe funkcje do obliczania średnich</h3>
+    <h3>Harmonisches Mittel</h3>
     <p>
-        W arkuszu Google Spreadsheet istnieje wiele funkcji, które pozwalają na obliczanie różnych rodzajów średnich.
-        Oprócz już wymienionych: średniej arytmetycznej (AVERAGE), średniej ważonej (AVERAGE.WEIGHTED, SUMPRODUCT, SUM)
-        i średniej harmonicznej (HARMEAN) istnieją również inne rodzaje średnich,
-        które można obliczyć za pomocą funkcji arkusza kalkulacyjnego:
+        Um das harmonische Mittel zu berechnen, tragen Sie die Daten in eine Spalte des Tabellenkalkulationsblatts ein,
+        und geben Sie dann in einer anderen Zelle die Formel <code>=HARMEAN(Zelle1:Zelle2)</code> ein,
+        wobei <code>Zelle1</code> und <code>Zelle2</code> die erste und letzte Zelle mit Daten sind.
+        Diese Formel berechnet automatisch das harmonische Mittel für die gesamte Datenreihe.
+    </p>
+    <p>
+        Beachten Sie, dass das harmonische Mittel nur positive Zahlen verwendet.
+        Wenn die Daten negative Zahlen oder Null enthalten,
+        kann das harmonische Mittel nicht berechnet werden und das Tabellenkalkulationsprogramm gibt einen Fehler aus.
+    </p>
+
+    <h3>Weitere Funktionen zur Berechnung von Durchschnitten</h3>
+    <p>
+        In Google Tabellen gibt es viele Funktionen, die die Berechnung verschiedener Arten von Durchschnitten ermöglichen.
+        Neben den bereits genannten: arithmetisches Mittel (AVERAGE), gewichtetes Mittel (AVERAGE.WEIGHTED, SUMPRODUCT, SUM)
+        und harmonisches Mittel (HARMEAN) gibt es auch andere Arten von Durchschnitten,
+        die mit Tabellenkalkulationsfunktionen berechnet werden können:
     </p>
     <ul>
-        <li>Mediana (MEDIAN) - średnia z wartości pośrodku danych, po uporządkowaniu ich według wielkości.</li>
-        <li>Moda (MODE) - najczęściej występująca wartość w danych.</li>
-        <li>Średnia geometryczna (GEOMEAN) - pierwiastek n-tego stopnia z iloczynu wartości danych, gdzie n to liczba danych.</li>
-        <li>Średnia kwadratowa (AVERAGE^2) - pierwiastek z iloczynu wartości danych, pomnożony przez liczbę danych</li>
-        <li>Średnia kwadratowa ważona (WEIGHTEDAVG^2) - pierwiastek z iloczynu wartości danych, pomnożony przez liczbę danych oraz wagami dla każdego danego</li>
+        <li>Median (MEDIAN) - das Mittelwert der Werte in der Mitte der Daten, nach ihrer Größe sortiert.</li>
+        <li>Modus (MODE) - der am häufigsten vorkommende Wert in den Daten.</li>
+        <li>Geometrisches Mittel (GEOMEAN) - die n-te Wurzel des Produkts der Datenwerte, wobei n die Anzahl der Daten ist.</li>
+        <li>Quadratisches Mittel (AVERAGE^2) - die Wurzel aus dem Produkt der Datenwerte, multipliziert mit der Anzahl der Daten</li>
+        <li>Gewichtetes quadratisches Mittel (WEIGHTEDAVG^2) - die Wurzel aus dem Produkt der Datenwerte, multipliziert mit der Anzahl der Daten und den Gewichten für jeden Wert</li>
     </ul>
     <p>
-        Warto pamiętać, że niektóre z tych funkcji mają ograniczenia co do rodzaju danych,
-        które można przekazać jako argumenty,
-        np. w przypadku funkcji mediany i mody nie mogą być przekazywane zbiory z danymi kategorycznymi,
-        a w przypadku funkcji średniej kwadratowej dane muszą być liczbami dodatnimi.
+        Es ist zu beachten, dass einige dieser Funktionen Einschränkungen hinsichtlich der Art der Daten haben,
+        die als Argumente übergeben werden können,
+        z.B. können für die Median- und Modusfunktionen keine Datensätze mit kategorischen Daten übergeben werden,
+        und für die Funktion des quadratischen Mittels müssen die Daten positive Zahlen sein.
     </p>
 
-    <h4>Podsumowanie</h4>
+    <h4>Zusammenfassung</h4>
     <p>
-        Podsumowując, arkusz kalkulacyjny Google Spreadsheet to bardzo przydatne narzędzie do obliczania różnych średnich,
-        pozwalają na automatyczne obliczanie średniej arytmetycznej, ważonej oraz harmonicznej.
-        Dzięki wykorzystaniu formuł proces jest szybki i łatwy, a wyniki są precyzyjne.
+        Zusammenfassend ist Google Tabellen ein sehr nützliches Werkzeug zur Berechnung verschiedener Durchschnitte,
+        das die automatische Berechnung von arithmetischem, gewichtetem und harmonischem Mittel ermöglicht.
+        Durch die Verwendung von Formeln ist der Prozess schnell und einfach und die Ergebnisse sind präzise.
     </p>
+
 @endsection

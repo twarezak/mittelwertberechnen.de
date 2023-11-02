@@ -18,37 +18,37 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 })->name('home_page');
-Route::get('/srednia-arytmetyczna', function () {
+Route::get('/arithmetisches-mittel', function () {
     return view('arithmetic');
 })->name('arithmetic');
-Route::get('/srednia-wazona', function () {
+Route::get('/gewichtetes-mittel', function () {
     return view('weight');
 })->name('weight');
-Route::get('/srednia-geometryczna', function () {
+Route::get('/geometrisches-mittel', function () {
     return view('geometric');
 })->name('geometric');
-Route::get('/srednia-harmoniczna', function () {
+Route::get('/harmonisches-mittel', function () {
     return view('harmonic');
 })->name('harmonic');
-Route::get('/mediana', function () {
+Route::get('/median', function () {
     return view('median');
 })->name('median');
-Route::get('/srednia-kwadratowa', function () {
+Route::get('/quadratisches-mittel', function () {
     return view('square');
 })->name('square');
-Route::get('/cwiczenia-zadania', function () {
+Route::get('/ubungen-aufgaben', function () {
     return view('tasks');
 })->name('tasks');
-Route::get('/srednia-arkusz-google-spreadsheet', function () {
+Route::get('/mittelwert-google-spreadsheet', function () {
     return view('spreadsheet');
 })->name('spreadsheet');
-Route::get('/srednie-outliery-wartosci-odstajace', function () {
+Route::get('/mittelwert-ausreisser-werte-ausreisser', function () {
     return view('outliery');
 })->name('outliery');
-Route::get('/srednie-w-statystyce', function () {
+Route::get('/durchschnittswerte-in-statistik', function () {
     return view('statistic');
 })->name('statistic');
-Route::get('/odchylenie-standardowe', function () {
+Route::get('/standardabweichung', function () {
     return view('standard-deviation');
 })->name('standard-deviation');
 

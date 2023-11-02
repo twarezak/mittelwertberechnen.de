@@ -1,99 +1,96 @@
 @extends('app')
 
-@section('title', 'Zastosowanie średnich w statystyce')
-@section('description', 'Dowiedz się, jakie są rodzaje średnich i jak stosować je w analizie danych. Poznaj zastosowanie średnich w naukach społecznych, przyrodniczych i ekonomii.')
+@section('title', 'Verwendung von Durchschnitten in der Statistik')
+@section('description', 'Erfahren Sie mehr über die Arten von Durchschnitten und wie sie in der Datenanalyse verwendet werden. Entdecken Sie die Anwendung von Durchschnitten in den Sozial-, Naturwissenschaften und der Ökonomie.')
 @section('keywords', '')
 
 @section('content')
-    <h2>Wprowadzenie</h2>
+    <h2>Einführung</h2>
     <p>
-        Średnia to miara tendencji centralnej, która służy do opisu wartości zmiennych w zbiorze danych.
-        Średnia jest obliczana poprzez dodanie wszystkich wartości w zbiorze i podzielenie wyniku przez liczbę elementów w tym zbiorze.
+        Der Durchschnitt ist ein Maß für die zentrale Tendenz, das dazu dient, die Werte von Variablen in einem Datensatz zu beschreiben.
+        Der Durchschnitt wird berechnet, indem alle Werte im Set addiert und das Ergebnis durch die Anzahl der Elemente im Set geteilt wird.
     </p>
     <p>
-        Średnia jest jednym z podstawowych narzędzi statystycznych, które służą do analizy i interpretacji danych.
-        Używa się jej do wyliczenia wartości centralnej w zbiorze danych oraz do porównywania wartości w różnych zbiorach.
-        Średnia jest często stosowana w naukach społecznych, ekonomii, medycynie, psychologii, fizyce i innych dziedzinach.
+        Der Durchschnitt ist eines der grundlegenden statistischen Werkzeuge, die zur Analyse und Interpretation von Daten verwendet werden.
+        Er wird verwendet, um den zentralen Wert in einem Datensatz zu berechnen und Werte in verschiedenen Sets zu vergleichen.
+        Der Durchschnitt wird häufig in den Sozialwissenschaften, der Ökonomie, der Medizin, der Psychologie, der Physik und anderen Bereichen verwendet.
     </p>
-    <h3>Rodzaje średnich</h3>
+    <h3>Arten von Durchschnitten</h3>
     <p>
-        Wyróżnia się kilka rodzajów średnich, w tym średnią arytmetyczną, średnią ważoną, średnią geometryczną i średnią harmoniczną.
-        Każda z tych średnich ma swoje zastosowanie w statystyce, a wybór odpowiedniej zależy od celu analizy oraz charakteru zbioru danych.
-    </p>
-    <p>
-        <a href="{{ route('arithmetic') }}" title="średnia arytmetyczna - kalkulator średniej arytmetycznej">Średnia arytmetyczna</a>
-        jest najczęściej stosowaną średnią i obliczana jest przez dodanie wszystkich wartości
-        w zbiorze i podzielenie sumy przez liczbę elementów w tym zbiorze.
+        Es gibt verschiedene Arten von Durchschnitten, einschließlich des arithmetischen Mittels, des gewichteten Mittels, des geometrischen Mittels und des harmonischen Mittels.
+        Jeder dieser Durchschnitte hat seine Anwendung in der Statistik, und die Wahl des richtigen Durchschnitts hängt vom Ziel der Analyse und der Natur des Datensatzes ab.
     </p>
     <p>
-        <a href="{{ route('weight') }}" title="średnia ważona - kalkulator średniej ważonej">Średnia ważona</a>
-        jest obliczana poprzez przypisanie wag każdej wartości w zbiorze,
-        a następnie podzielenie sumy iloczynów wag i wartości przez sumę wag.
+        Das <a href="{{ route('arithmetic') }}" title="Arithmetisches Mittel - Rechner für das arithmetische Mittel">arithmetische Mittel</a>
+        ist das am häufigsten verwendete und wird berechnet, indem alle Werte im Set addiert und die Summe durch die Anzahl der Elemente im Set geteilt wird.
     </p>
     <p>
-        <a href="{{ route('geometric') }}" title="średnia geometryczna - kalkulator średniej geometrycznej">Średnia geometryczna</a>
-        jest stosowana w przypadkach, gdy istotna jest wielkość względna wartości w zbiorze danych,
-        a nie ich wartość bezwzględna.
+        Das <a href="{{ route('weight') }}" title="Gewichtetes Mittel - Rechner für das gewichtete Mittel">gewichtete Mittel</a>
+        wird berechnet, indem jeder Wert im Set ein Gewicht zugewiesen bekommt und dann die Summe der Produkte aus Gewichten und Werten durch die Summe der Gewichte geteilt wird.
     </p>
     <p>
-        <a href="{{ route('harmonic') }}" title="średnia harmoniczna - kalkulator średniej harmonicznej">Średnia harmoniczna</a>
-        jest używana do obliczania średniej szybkości lub czasu,
-        a jej wartość jest odwrotnością średniej arytmetycznej odwrotności wartości w zbiorze.
+        Das <a href="{{ route('geometric') }}" title="Geometrisches Mittel - Rechner für das geometrische Mittel">geometrische Mittel</a>
+        wird verwendet, wenn die relative Größe der Werte in einem Datensatz wichtig ist, nicht ihr absoluter Wert.
     </p>
     <p>
-        Wybór odpowiedniej średniej zależy od celu analizy oraz od charakteru zbioru danych.
-        W przypadku zbiorów składających się z wartości o podobnej wadze,
-        najlepszą miarą tendencji centralnej jest średnia arytmetyczna. W przypadku zbiorów,
-        w których niektóre wartości mają większe znaczenie niż inne, lepiej jest stosować średnią ważoną.
-        Średnia geometryczna jest przydatna w przypadku zbiorów, w których istotna jest względna wielkość wartości,
-        a nie ich wartość bezwzględna, np. w analizie wskaźników finansowych.
-        Natomiast średnia harmoniczna jest stosowana do obliczania średniej szybkości lub czasu,
-        gdy interesujące są wartości odwrotne do wartości w zbiorze danych.
+        Das <a href="{{ route('harmonic') }}" title="Harmonisches Mittel - Rechner für das harmonische Mittel">harmonische Mittel</a>
+        wird zur Berechnung der durchschnittlichen Geschwindigkeit oder Zeit verwendet,
+        und sein Wert ist der Kehrwert des arithmetischen Mittels der Kehrwerte der Werte im Set.
     </p>
-    <h3>Zastosowanie średnich w analizie danych</h3>
     <p>
-        Średnie są bardzo ważnym narzędziem w analizie danych,
-        umożliwiającym szybką i skuteczną analizę rozkładu wartości w zbiorze danych.
-        Przykładowe zastosowania średnich w analizie danych to:
+        Die Wahl des richtigen Durchschnitts hängt vom Ziel der Analyse und der Natur des Datensatzes ab.
+        Für Sets mit Werten ähnlichen Gewichts ist das arithmetische Mittel das beste Maß für die zentrale Tendenz. Für Sets,
+        in denen einige Werte wichtiger sind als andere, ist das gewichtete Mittel besser geeignet.
+        Das geometrische Mittel ist nützlich für Sets, in denen die relative Größe der Werte wichtig ist,
+        nicht ihr absoluter Wert, wie zum Beispiel bei der Analyse von Finanzkennzahlen.
+        Das harmonische Mittel wird verwendet, um die durchschnittliche Geschwindigkeit oder Zeit zu berechnen,
+        wenn die Kehrwerte der Werte im Datensatz von Interesse sind.
+    </p>
+    <h3>Anwendung von Durchschnitten in der Datenanalyse</h3>
+    <p>
+        Durchschnitte sind ein sehr wichtiges Werkzeug in der Datenanalyse,
+        das eine schnelle und effektive Analyse der Werteverteilung in einem Datensatz ermöglicht.
+        Beispiele für die Anwendung von Durchschnitten in der Datenanalyse sind:
     </p>
     <ul>
         <li>
-            <strong>Ocena wartości ekonomicznych</strong><br />
-            Średnie są często używane w analizie finansowej, aby ocenić wartość akcji, inwestycji lub portfela inwestycyjnego.
-            Na przykład, stosując średnią arytmetyczną, można obliczyć średnią stopę zwrotu lub średnią wartość akcji w określonym okresie.
+            <strong>Bewertung wirtschaftlicher Werte</strong><br />
+            Durchschnitte werden häufig in der Finanzanalyse verwendet, um den Wert von Aktien, Investitionen oder einem Anlageportfolio zu bewerten.
+            Zum Beispiel kann mit dem arithmetischen Mittel die durchschnittliche Rendite oder der durchschnittliche Aktienwert über einen bestimmten Zeitraum berechnet werden.
         </li>
         <li>
-            <strong>Analiza wyników badań naukowych</strong><br />
-            Średnie są powszechnie stosowane w badaniach naukowych do prezentacji wyników badań
-            i porównywania wyników między różnymi grupami badawczymi. Na przykład, stosując średnią arytmetyczną,
-            można obliczyć średnią wartość pomiaru w każdej grupie badawczej, a następnie porównać wyniki między grupami.
+            <strong>Analyse von Forschungsergebnissen</strong><br />
+            Durchschnitte werden in der wissenschaftlichen Forschung häufig zur Präsentation von Forschungsergebnissen
+            und zum Vergleich der Ergebnisse zwischen verschiedenen Forschungsgruppen verwendet. Zum Beispiel kann mit dem arithmetischen Mittel
+            der durchschnittliche Messwert in jeder Forschungsgruppe berechnet und dann die Ergebnisse zwischen den Gruppen verglichen werden.
         </li>
         <li>
-            <strong>Analiza opinii i ocen</strong><br />
-            Średnie są często stosowane w analizie opinii i ocen, na przykład w ankietach.
-            Na przykład, stosując średnią arytmetyczną, można obliczyć średnią ocenę produktu lub usługi na podstawie
-            ocen udzielonych przez różnych respondentów.
-        <li>
-            <strong>Monitorowanie trendów</strong><br />
-            Średnie są przydatne w monitorowaniu trendów w danych, takich jak wzrost lub spadek wartości w czasie.
-            Na przykład, stosując średnią kroczącą, można wygładzić szumy w danych i lepiej zobaczyć długoterminowe trendy.
+            <strong>Analyse von Meinungen und Bewertungen</strong><br />
+            Durchschnitte werden häufig in der Meinungs- und Bewertungsanalyse verwendet, zum Beispiel in Umfragen.
+            Zum Beispiel kann mit dem arithmetischen Mittel die durchschnittliche Bewertung eines Produkts oder einer Dienstleistung basierend auf
+            den Bewertungen verschiedener Befragten berechnet werden.
         </li>
         <li>
-            <strong>Identyfikacja wartości odstających</strong><br />
-            Średnie są również używane do identyfikacji wartości odstających w zbiorze danych, czyli wartości,
-            które są znacznie różnią się od reszty wartości w zbiorze. Na przykład, stosując średnią i odchylenie standardowe,
-            można wykryć wartości, które znajdują się poza przedziałem trzech odchyleń standardowych od średniej,
-            co sugeruje, że mogą być wartościami odstającymi.
+            <strong>Überwachung von Trends</strong><br />
+            Durchschnitte sind nützlich, um Trends in Daten wie Wertsteigerungen oder -rückgängen im Laufe der Zeit zu überwachen.
+            Zum Beispiel kann mit einem gleitenden Durchschnitt das Rauschen in den Daten geglättet und langfristige Trends besser sichtbar gemacht werden.
+        </li>
+        <li>
+            <strong>Identifizierung von Ausreißern</strong><br />
+            Durchschnitte werden auch verwendet, um Ausreißer in einem Datensatz zu identifizieren, d.h. Werte,
+            die sich erheblich von den anderen Werten im Datensatz unterscheiden. Zum Beispiel können mit dem Durchschnitt und der Standardabweichung
+            Werte erkannt werden, die außerhalb von drei Standardabweichungen vom Durchschnitt liegen,
+            was darauf hindeutet, dass sie Ausreißer sein könnten.
         </li>
     </ul>
-    <h4>Podsumowanie</h4>
+    <h4>Zusammenfassung</h4>
     <p>
-        Średnie są powszechnie stosowanym narzędziem w statystyce i analizie danych,
-        umożliwiającym szybką i skuteczną analizę rozkładu wartości w zbiorze danych.
-        Istnieją różne rodzaje średnich, takie jak średnia arytmetyczna, ważona, geometryczna i harmoniczna,
-        z których każda ma swoje zastosowanie w zależności od charakteru zbioru danych i celu analizy.
-        Średnie znajdują zastosowanie w wielu dziedzinach, takich jak ekonomia, nauki społeczne, nauki przyrodnicze,
-        analiza danych i wiele innych. W zależności od konkretnych potrzeb,
-        odpowiednio dobrana średnia może być bardzo przydatnym narzędziem do analizy i interpretacji zbiorów danych.
+        Durchschnitte sind ein in der Statistik und Datenanalyse häufig verwendetes Werkzeug,
+        das eine schnelle und effektive Analyse der Werteverteilung in einem Datensatz ermöglicht.
+        Es gibt verschiedene Arten von Durchschnitten wie das arithmetische, gewichtete, geometrische und harmonische Mittel,
+        von denen jeder je nach Natur des Datensatzes und Analysezweck seine Anwendung findet.
+        Durchschnitte werden in vielen Bereichen wie der Ökonomie, den Sozialwissenschaften, den Naturwissenschaften,
+        der Datenanalyse und vielen anderen eingesetzt. Abhängig von den spezifischen Bedürfnissen
+        kann ein passend gewählter Durchschnitt ein sehr nützliches Werkzeug zur Analyse und Interpretation von Datensätzen sein.
     </p>
 @endsection
