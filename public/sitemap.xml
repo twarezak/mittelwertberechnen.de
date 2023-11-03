@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+    <url>
+        <loc>https://mittelwertberechnen.de/</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/arithmetisches-mittel</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/gewichtetes-mittel</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/geometrisches-mittel</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/harmonisches-mittel</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/median</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/quadratisches-mittel</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/ubungen-aufgaben</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/mittelwert-google-spreadsheet</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/durchschnittswerte-in-statistik</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/mittelwert-ausreisser-werte-ausreisser</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/standardabweichung</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/datenschutzbestimmungen-und-cookies</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/uber-die-website</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://mittelwertberechnen.de/kontakt</loc>
+        <lastmod>2023-11-03T15:07:02+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+
+</urlset>

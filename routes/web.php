@@ -52,10 +52,10 @@ Route::get('/standardabweichung', function () {
     return view('standard-deviation');
 })->name('standard-deviation');
 
-Route::get('/polityka-prywatnosci-i-ciasteczka', function () {
+Route::get('/datenschutzbestimmungen-und-cookies', function () {
     return view('cookies');
 })->name('cookies');
-Route::get('/o-stronie', function () {
+Route::get('/uber-die-website', function () {
     return view('about');
 })->name('about');
 Route::get('/kontakt', [Contact::class, 'contact'])->name('contact');
