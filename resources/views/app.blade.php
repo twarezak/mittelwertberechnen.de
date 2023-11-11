@@ -17,7 +17,10 @@
     <meta property="og:url" content="{{ $currentUrl }}"/>
     <meta property="og:site_name" content="{{ $siteTitle }}"/>
     <link rel="icon" type="image/png" href="{{ asset('img/average.png') }}">
-
+    @if ($appEnv === 'prod')
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9047305524185109"
+            crossorigin="anonymous"></script>
+    @endif
 </head>
 
 <body class="font-sans">
